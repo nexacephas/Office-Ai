@@ -28,10 +28,8 @@ function isValidEmail(email: string) {
 
 export default function Signup() {
   const navigate = useNavigate()
-  const [selectedPlanId, setSelectedPlanId] = useState<SubscriptionPlanId | null>(() => getPendingPlan())
-  const [step, setStep] = useState<'plan' | 'workspace' | 'enterprise-confirmation'>(
-    () => (getPendingPlan() ? 'workspace' : 'plan'),
-  )
+  const [selectedPlanId, setSelectedPlanId] = useState<SubscriptionPlanId | null>(() => getPendingPlan() ?? 'free')
+  const [step, setStep] = useState<'plan' | 'workspace' | 'enterprise-confirmation'>('workspace')
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [organization, setOrganization] = useState('')
@@ -42,13 +40,13 @@ export default function Signup() {
   const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errors, setErrors] = useState<SignupErrors>({})
-  const selectedPlan = subscriptionPlans.find((plan) => plan.id === selectedPlanId) ?? null
+  const selectedPlan = subscriptionPlans.find((plan) => plan.id === selectedPlanId) ?? subscriptionPlans[0]
 
   if (isAuthenticated() && step !== 'enterprise-confirmation') {
     return <Navigate to="/dashboard" replace />
   }
 
-  if (step === 'plan' || !selectedPlan) {
+  if (step === 'plan') {
     return (
       <PlanSelection
         selectedPlan={selectedPlanId}

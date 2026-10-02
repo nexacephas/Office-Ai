@@ -32,16 +32,16 @@ export default function PlanSelection({ selectedPlan, onSelect, onContinue }: Pl
             <span>OfficePilot <strong>AI</strong></span>
           </Link>
           <ol className="signup-progress" aria-label="Signup progress">
-            <li aria-current="step"><span>1</span> Choose plan</li>
-            <li><span>2</span> Create workspace</li>
+            <li><span>1</span> Create workspace</li>
+            <li aria-current="step"><span>2</span> Choose plan</li>
           </ol>
         </header>
 
         <section className="plan-selection-content" aria-labelledby="plan-selection-title">
           <div className="plan-selection-heading">
-            <p className="plan-selection-eyebrow">STEP 1 OF 2</p>
+            <p className="plan-selection-eyebrow">STEP 2 OF 2</p>
             <h1 id="plan-selection-title">Choose your plan</h1>
-            <p>Start with the plan that fits your organization&apos;s needs. You can change your plan later.</p>
+            <p>Now that your workspace is created, select the plan that fits your organization&apos;s needs.</p>
           </div>
 
           <div className="plan-card-grid" role="radiogroup" aria-label="Select a subscription plan">
