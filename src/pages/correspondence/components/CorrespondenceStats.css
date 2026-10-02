@@ -1,0 +1,24 @@
+.correspondence-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); }
+.correspondence-stat { display: flex; align-items: center; gap: 0.55rem; min-width: 0; min-height: 3.5rem; padding: 0.55rem 0.8rem; border-right: 1px solid var(--border-light); text-align: left; transition: background var(--transition-fast); }
+.correspondence-stat:last-child { border-right: 0; }
+.correspondence-stat:hover,
+.correspondence-stat.is-active { background: var(--surface-soft); }
+.correspondence-stat.is-active { box-shadow: inset 0 -2px var(--accent); }
+.correspondence-stat-icon { display: grid; flex: 0 0 auto; place-items: center; width: 1.85rem; height: 1.85rem; border-radius: 6px; background: var(--surface-soft); color: var(--primary-light); }
+.correspondence-stat--incoming .correspondence-stat-icon { color: var(--info); }
+.correspondence-stat--awaiting .correspondence-stat-icon { color: var(--warning); }
+.correspondence-stat--outgoing .correspondence-stat-icon { color: var(--accent); }
+.correspondence-stat--overdue .correspondence-stat-icon { color: var(--danger); }
+.correspondence-stat-copy { display: flex; flex: 1; flex-direction: column; min-width: 0; }
+.correspondence-stat-copy > span { overflow: hidden; color: var(--text-primary); font-size: 0.73rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.correspondence-stat-copy small { margin-top: 0.04rem; color: var(--text-muted); font-size: 0.6rem; }
+.correspondence-stat > strong { color: var(--primary-light); font-family: var(--font-heading); font-size: 1rem; font-variant-numeric: tabular-nums; }
+.correspondence-stat--overdue > strong { color: var(--danger); }
+@media (max-width: 700px) {
+  .correspondence-stat { align-items: flex-start; flex-wrap: wrap; gap: 0.35rem; min-height: 4rem; padding: 0.5rem 0.55rem; }
+  .correspondence-stat-icon { width: 1.5rem; height: 1.5rem; }
+  .correspondence-stat-copy { flex-basis: calc(100% - 1.9rem); }
+  .correspondence-stat-copy > span { font-size: 0.62rem; white-space: normal; line-height: 1.2; }
+  .correspondence-stat-copy small { display: none; }
+  .correspondence-stat > strong { margin-left: auto; font-size: 0.85rem; }
+}

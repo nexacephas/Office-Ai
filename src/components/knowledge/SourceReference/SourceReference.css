@@ -1,0 +1,12 @@
+.knowledge-source-reference { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 0.6rem; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); }
+.knowledge-source-reference-number { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; background: var(--accent-light); color: var(--accent); font-size: 0.65rem; font-weight: 750; }
+.knowledge-source-reference-body { display: grid; min-width: 0; gap: 0.35rem; }
+.knowledge-source-reference-heading { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.knowledge-source-reference-heading strong { min-width: 0; color: var(--primary); font-size: 0.75rem; }
+.knowledge-source-relevance { flex: 0 0 auto; padding: 0.14rem 0.35rem; border-radius: 4px; background: var(--accent-light); color: var(--accent); font-size: 0.59rem; font-weight: 650; }
+.knowledge-source-reference-body > p { color: var(--text-secondary); font-size: 0.68rem; line-height: 1.55; }
+.knowledge-source-reference-meta { display: flex; flex-wrap: wrap; gap: 0.3rem 0.55rem; color: var(--text-muted); font-size: 0.62rem; }
+.knowledge-source-reference-meta span + span::before { content: '·'; margin-right: 0.45rem; color: var(--border); }
+.knowledge-source-reference-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; padding-top: 0.3rem; border-top: 1px solid var(--border-light); }
+.knowledge-source-reference-actions button { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0; border: 0; background: transparent; color: var(--accent); font-size: 0.65rem; font-weight: 650; cursor: pointer; }
+@media (max-width: 440px) { .knowledge-source-reference-heading { align-items: flex-start; flex-direction: column; } }

@@ -1,0 +1,109 @@
+.approval-detail-panel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 40;
+  display: flex;
+  width: min(640px, 100vw);
+  height: 100dvh;
+  max-height: 100dvh;
+  flex-direction: column;
+  overflow: auto;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  padding: 1rem;
+  box-shadow: -12px 0 30px rgba(15, 23, 42, 0.14);
+}
+
+.approval-detail-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.approval-detail-panel__header h3 {
+  margin: 0.3rem 0 0;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.approval-detail-panel__eyebrow {
+  display: block;
+  color: var(--accent);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.approval-detail-panel__status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.approval-detail-panel .status-pill,
+.approval-detail-panel .priority-pill { min-height: 22px; padding: 0.16rem 0.38rem; border-radius: 4px; font-size: 0.63rem; }
+
+.approval-detail-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.approval-detail-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8rem;
+  background: var(--surface);
+}
+
+.approval-detail-card h4 {
+  margin: 0 0 0.8rem;
+  color: var(--primary);
+  font-size: 0.78rem;
+}
+
+.approval-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.approval-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.approval-detail-item span,
+.approval-detail-note span {
+  color: var(--text-secondary);
+  font-size: 0.66rem;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.approval-detail-note {
+  margin-top: 1rem;
+}
+
+.approval-detail-note p {
+  margin: 0.55rem 0 0;
+  color: var(--text-primary);
+  font-size: 0.73rem;
+}
+
+@media (max-width: 760px) {
+  .approval-detail-panel {
+    width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-left: 0;
+  }
+
+  .approval-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,33 @@
+.approval-empty-state {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border: 1px dashed #dfe7ef;
+  border-radius: 18px;
+  background: #f9fbff;
+}
+
+.approval-empty-state__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  background: #eaf7ef;
+  color: #168a5b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.approval-empty-state h3 {
+  margin: 0;
+  color: #0b1f33;
+}
+
+.approval-empty-state p {
+  margin: 0;
+  color: #64748b;
+}

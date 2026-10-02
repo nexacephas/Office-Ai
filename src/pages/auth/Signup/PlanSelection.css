@@ -1,0 +1,225 @@
+.plan-selection-page {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.plan-selection-container {
+  width: min(100%, 1320px);
+  min-height: 100vh;
+  padding: var(--space-4) var(--space-6) var(--space-6);
+  margin-inline: auto;
+}
+
+.signup-flow-header {
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.signup-flow-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-flow-brand strong {
+  color: var(--accent);
+}
+
+.signup-flow-brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--accent);
+}
+
+.signup-flow-brand-mark svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.signup-progress {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  gap: var(--space-5);
+  color: var(--text-muted);
+  font-size: 11px;
+  list-style: none;
+}
+
+.signup-progress li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.signup-progress li[aria-current='step'] {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.signup-progress li span {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 10px;
+}
+
+.signup-progress li[aria-current='step'] span {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--text-white);
+}
+
+.plan-selection-content {
+  padding-block: var(--space-6);
+}
+
+.plan-selection-heading {
+  max-width: 620px;
+  margin-bottom: var(--space-5);
+}
+
+.plan-selection-eyebrow {
+  margin-bottom: var(--space-2);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.plan-selection-heading h1 {
+  margin-bottom: var(--space-2);
+  font-size: 28px;
+  letter-spacing: 0;
+}
+
+.plan-selection-heading > p:last-child {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.plan-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: var(--space-4);
+}
+
+.plan-selection-actions {
+  display: flex;
+  padding-top: var(--space-5);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.plan-selection-continue {
+  min-width: 230px;
+  min-height: 46px;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.plan-selection-continue:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.plan-selection-actions p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.plan-selection-actions a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.plan-selection-actions a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1050px) {
+  .plan-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .plan-selection-container {
+    padding-inline: var(--space-4);
+  }
+
+  .signup-flow-header {
+    min-height: 60px;
+  }
+
+  .signup-progress {
+    gap: var(--space-2);
+    font-size: 0;
+  }
+
+  .signup-progress li {
+    gap: 0;
+  }
+
+  .signup-progress li span {
+    font-size: 10px;
+  }
+
+  .plan-selection-content {
+    padding-top: var(--space-5);
+  }
+
+  .plan-selection-heading h1 {
+    font-size: 24px;
+  }
+
+  .plan-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .plan-selection-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .plan-selection-continue {
+    width: 100%;
+  }
+
+  .plan-selection-actions p {
+    text-align: center;
+  }
+}

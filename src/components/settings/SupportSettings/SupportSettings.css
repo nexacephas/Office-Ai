@@ -1,0 +1,8 @@
+.support-links { display: grid; border-top: 1px solid var(--border-light); }
+.support-links button { display: grid; grid-template-columns: 36px minmax(0, 1fr) 18px; align-items: center; gap: 0.7rem; padding: 0.75rem 0; border: 0; border-bottom: 1px solid var(--border-light); background: transparent; text-align: left; cursor: pointer; }
+.support-links button > span:first-child { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 7px; background: var(--surface-soft); color: var(--primary); }
+.support-links button > span:nth-child(2) { display: grid; gap: 0.12rem; }
+.support-links strong { color: var(--text-primary); font-size: 0.77rem; }
+.support-links small { color: var(--text-secondary); font-size: 0.69rem; }
+.support-links button > svg { color: var(--text-muted); }
+.support-links button:hover strong { color: var(--accent); }

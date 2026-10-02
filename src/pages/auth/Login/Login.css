@@ -1,0 +1,7 @@
+.login-form {
+  margin-top: var(--space-5);
+}
+
+.login-form .auth-divider {
+  margin-block: var(--space-1);
+}

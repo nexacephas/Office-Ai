@@ -1,0 +1,55 @@
+.dashboard-layout {
+  --sidebar-collapsed-width: 88px;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+.app-content {
+  display: flex;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+  flex-direction: column;
+}
+
+.dashboard-layout.is-sidebar-collapsed .app-content {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+.app-main {
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  padding: var(--space-7);
+}
+
+body.navigation-open {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .app-main {
+    padding: var(--space-5);
+  }
+}
+
+@media (max-width: 767px) {
+  .app-content {
+    margin-left: 0;
+  }
+
+  .app-main {
+    padding: var(--space-4);
+  }
+
+  .mobile-navigation-overlay {
+    position: fixed;
+    z-index: var(--z-sticky);
+    inset: var(--header-height) 0 0 min(280px, calc(100vw - var(--space-7)));
+    display: block;
+    width: auto;
+    border: 0;
+    background: color-mix(in srgb, var(--primary) 58%, transparent);
+    cursor: default;
+  }
+}

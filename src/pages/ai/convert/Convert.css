@@ -1,0 +1,105 @@
+.convert-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  color: #132238;
+}
+
+.convert-workspace-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fff 0%, #f7fafb 100%);
+}
+
+.convert-workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.convert-workspace-header span {
+  display: block;
+  color: #5f7289;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+}
+
+.convert-workspace-header h2 {
+  margin: 0.4rem 0 0;
+  color: #15273b;
+}
+
+.convert-workspace-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.1rem;
+}
+
+.convert-workspace-main,
+.convert-workspace-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.convert-empty-inline {
+  padding: 0.9rem 1rem;
+  border: 1px dashed #cfe3db;
+  border-radius: 12px;
+  color: #566d86;
+  background: #f7fbf9;
+}
+
+.convert-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.convert-column-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.convert-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 0.9rem 1.05rem;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.2);
+}
+
+@media (max-width: 1100px) {
+  .conversion-tools-grid,
+  .convert-content-grid,
+  .convert-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .convert-header {
+    flex-direction: column;
+  }
+
+  .convert-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .result-details,
+  .ocr-options,
+  .progress-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}

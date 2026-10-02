@@ -1,0 +1,5 @@
+.settings-save-state { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--text-secondary); font-size: 0.73rem; }
+.settings-save-state.is-saved { color: var(--success); }
+.settings-save-state.is-editing { color: var(--warning); }
+.settings-save-state.is-saving { color: var(--text-secondary); }
+.settings-save-state.is-error { color: var(--danger); }

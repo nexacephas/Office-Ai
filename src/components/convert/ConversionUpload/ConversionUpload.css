@@ -1,0 +1,45 @@
+.conversion-upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 1.5rem;
+  border: 1.5px dashed #a9c9bc;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f6fbf9 0%, #edf7f5 100%);
+  color: #1b2c3d;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 0.7rem;
+  border-radius: 16px;
+  background: #dff5ee;
+  color: #0b7b5c;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.conversion-upload-box strong {
+  font-size: 1.15rem;
+}
+
+.conversion-upload-box span,
+.conversion-upload-box small {
+  color: #5c6f85;
+}
+
+.conversion-upload-box small {
+  margin-top: 0.35rem;
+}
+
+.convert-hidden-input {
+  display: none;
+}

@@ -1,0 +1,32 @@
+.ai-composer-wrap { flex: 0 0 auto; padding: .5rem .75rem .45rem; border-top: 1px solid var(--border-light); background: var(--surface); }
+.ai-composer { display: flex; flex-direction: column; gap: .4rem; max-width: 52rem; margin: 0 auto; padding: .55rem .6rem .4rem; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); box-shadow: 0 2px 8px rgba(15,23,42,.04); }
+.ai-composer:focus-within { border-color: rgba(22,58,89,.45); box-shadow: 0 0 0 3px rgba(22,58,89,.06); }
+.ai-composer > textarea { display: block; width: 100%; min-height: 1.5rem; max-height: 10rem; padding: .1rem .1rem; border: 0; outline: 0; background: transparent; color: var(--text-primary); font-family: var(--font-body); font-size: .68rem; line-height: 1.5; resize: none; }
+.ai-composer > textarea::placeholder { color: var(--text-muted); }
+.ai-composer-controls { display: flex; align-items: center; gap: .45rem; }
+.ai-composer-controls > div { display: flex; align-items: center; gap: .25rem; }
+.ai-composer-attach,.ai-use-context { display: inline-flex; align-items: center; gap: .25rem; min-height: 1.7rem; padding: .28rem .4rem; border-radius: 5px; color: var(--text-secondary); font-size: .56rem; font-weight: 600; }
+.ai-composer-attach:hover,.ai-use-context:hover { background: var(--surface-soft); color: var(--text-primary); }
+.ai-use-context > span { width: .48rem; height: .48rem; border: 1px solid var(--text-muted); border-radius: 50%; }
+.ai-use-context.is-active > span { border: 2px solid var(--accent); background: var(--accent); box-shadow: inset 0 0 0 1px var(--surface); }
+.ai-composer-hint { margin-left: auto; color: var(--text-muted); font-size: .5rem; }
+.ai-send-button { display: grid; flex: 0 0 auto; place-items: center; width: 1.85rem; height: 1.85rem; border-radius: 6px; background: var(--accent); color: white; }
+.ai-send-button:hover:not(:disabled) { background: var(--accent-hover); }
+.ai-send-button:disabled { background: var(--surface-soft); color: var(--text-muted); cursor: not-allowed; }
+.ai-send-spinner { width: .8rem; height: .8rem; border: 2px solid rgba(255,255,255,.45); border-top-color: white; border-radius: 50%; animation: ai-send-spin .7s linear infinite; }
+@keyframes ai-send-spin { to { transform: rotate(360deg); } }
+.ai-composer-attachments { display: flex; flex-wrap: wrap; gap: .3rem; }
+.ai-attachment-chip { display: inline-flex; align-items: center; gap: .25rem; max-width: 100%; padding: .25rem .35rem; border: 1px solid var(--border); border-radius: 5px; background: var(--surface-soft); color: var(--text-secondary); }
+.ai-attachment-chip strong { overflow: hidden; max-width: 10rem; color: var(--text-primary); font-size: .55rem; text-overflow: ellipsis; white-space: nowrap; }
+.ai-attachment-chip small { color: var(--text-muted); font-size: .49rem; white-space: nowrap; }
+.ai-attachment-chip button { display: grid; place-items: center; width: 1.15rem; height: 1.15rem; color: var(--text-muted); }
+.ai-composer-disclaimer { max-width: 52rem; margin: .22rem auto 0; color: var(--text-muted); font-size: .49rem; }
+@media (max-width: 767px) {
+  .ai-composer-wrap { padding: .42rem .45rem .35rem; }
+  .ai-composer { padding: .5rem .48rem .35rem; }
+  .ai-composer > textarea { font-size: .65rem; }
+  .ai-composer-hint { display: none; }
+  .ai-use-context { font-size: .52rem; }
+  .ai-composer-disclaimer { font-size: .45rem; }
+}
+@media (prefers-reduced-motion: reduce) { .ai-send-spinner { animation-duration: 1.5s; } }

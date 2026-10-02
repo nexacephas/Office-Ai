@@ -1,0 +1,56 @@
+.approval-deadlines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.approval-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.approval-section-header span {
+  color: var(--accent);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.approval-section-header h3 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.approval-deadline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.approval-deadline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.6rem;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  background: var(--surface-soft);
+}
+
+.approval-deadline-item strong {
+  color: var(--text-primary);
+  font-size: 0.74rem;
+}
+
+.approval-deadline-item small {
+  color: var(--text-secondary);
+  font-size: 0.66rem;
+}
+
+.approval-deadlines .priority-pill { align-self: flex-start; min-height: 20px; padding: 0.13rem 0.35rem; border-radius: 4px; font-size: 0.6rem; }

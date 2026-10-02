@@ -1,0 +1,35 @@
+.meeting-schedule-layer { z-index: calc(var(--z-modal) + 1); align-items: center; justify-content: center; padding: 1rem; }
+.meeting-schedule-modal { position: relative; z-index: 1; display: flex; flex-direction: column; width: min(47rem, 100%); max-height: min(92vh, 54rem); overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-lg); }
+.meeting-schedule-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.8rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-light); }
+.meeting-schedule-header h2 { font-size: 1rem; }
+.meeting-schedule-header p { margin-top: 0.12rem; color: var(--text-secondary); font-size: 0.65rem; }
+.meeting-schedule-modal form { display: flex; flex: 1; flex-direction: column; min-height: 0; }
+.meeting-schedule-body { overflow-y: auto; padding: 0.85rem 1rem; }
+.meeting-form-type { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin: 0.55rem 0 0.65rem; }
+.meeting-form-type > span { color: var(--text-secondary); font-size: 0.63rem; font-weight: 650; }
+.meeting-form-type > div { display: inline-flex; padding: 2px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface-soft); }
+.meeting-form-type button { min-height: 1.8rem; padding: 0.3rem 0.5rem; border-radius: 4px; color: var(--text-secondary); font-size: 0.61rem; font-weight: 650; }
+.meeting-form-type button.is-active { background: var(--surface); color: var(--primary-light); box-shadow: var(--shadow-sm); }
+.meeting-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.58rem 0.7rem; }
+.meeting-form-field { display: flex; flex-direction: column; gap: 0.22rem; min-width: 0; color: var(--text-secondary); font-size: 0.61rem; font-weight: 650; }
+.meeting-form-field.full { grid-column: 1 / -1; }
+.meeting-form-field i,.meeting-schedule-footer > span i { color: var(--danger); font-style: normal; }
+.meeting-form-field input,.meeting-form-field select,.meeting-form-field textarea { width: 100%; min-width: 0; min-height: 2rem; padding: 0.4rem 0.5rem; border: 1px solid var(--border); border-radius: 5px; outline: 0; background: var(--surface); color: var(--text-primary); font-family: var(--font-body); font-size: 0.65rem; font-weight: 400; }
+.meeting-form-field textarea { min-height: 3.2rem; line-height: 1.4; resize: vertical; }
+.meeting-form-field input:focus,.meeting-form-field select:focus,.meeting-form-field textarea:focus { border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(22,58,89,.07); }
+.meeting-form-field input::placeholder,.meeting-form-field textarea::placeholder { color: var(--text-muted); }
+.meeting-form-error { margin-top: 0.55rem; color: var(--danger); font-size: 0.65rem; }
+.meeting-form-ai { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.65rem; color: var(--accent-hover); font-size: 0.64rem; font-weight: 650; }
+.meeting-form-ai:hover { text-decoration: underline; }
+.meeting-schedule-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0.65rem 1rem; border-top: 1px solid var(--border-light); }
+.meeting-schedule-footer > span { color: var(--text-muted); font-size: 0.56rem; }
+.meeting-schedule-footer > div { display: flex; gap: 0.35rem; }
+.meeting-schedule-footer button { min-height: 2rem; padding: 0.3rem 0.5rem; font-size: 0.62rem; }
+@media (max-width: 620px) {
+  .meeting-schedule-layer { align-items: stretch; padding: 0; }
+  .meeting-schedule-modal { width: 100%; max-height: 100%; border: 0; border-radius: 0; }
+  .meeting-schedule-header,.meeting-schedule-body { padding-inline: 0.8rem; }
+  .meeting-schedule-footer { align-items: flex-start; flex-direction: column; padding-inline: 0.8rem; }
+  .meeting-schedule-footer > div { justify-content: flex-end; width: 100%; }
+}
+@media (max-width: 430px) { .meeting-form-grid { grid-template-columns: 1fr; } .meeting-form-field.full { grid-column: auto; } .meeting-form-type { align-items: flex-start; flex-direction: column; } }

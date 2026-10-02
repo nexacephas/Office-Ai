@@ -1,0 +1,7 @@
+.knowledge-sources-list { display: grid; gap: 0.5rem; }
+.knowledge-sources-list > h3 { margin-top: 0.2rem; color: var(--text-secondary); font-size: 0.68rem; font-weight: 700; }
+.knowledge-sources-list > h3:not(:first-child) { padding-top: 0.5rem; border-top: 1px solid var(--border-light); }
+.knowledge-no-references { padding: 0.7rem; border: 1px dashed var(--border); border-radius: 6px; color: var(--text-secondary); font-size: 0.72rem; }
+.knowledge-reference-skeletons { display: grid; gap: 0.45rem; }
+.knowledge-reference-skeletons i { height: 112px; border-radius: 6px; background: linear-gradient(90deg, var(--surface-soft), var(--border-light), var(--surface-soft)); background-size: 200% 100%; animation: knowledge-ref-shimmer 1.2s infinite; }
+@keyframes knowledge-ref-shimmer { to { background-position: -200% 0; } }

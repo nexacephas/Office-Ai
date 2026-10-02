@@ -1,0 +1,23 @@
+.meeting-overview { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); }
+.meeting-overview-item { display: flex; align-items: center; gap: 0.5rem; min-width: 0; min-height: 3.3rem; padding: 0.5rem 0.75rem; border-right: 1px solid var(--border-light); text-align: left; transition: background var(--transition-fast); }
+.meeting-overview-item:last-child { border-right: 0; }
+.meeting-overview-item:hover,
+.meeting-overview-item.is-active { background: var(--surface-soft); }
+.meeting-overview-item.is-active { box-shadow: inset 0 -2px var(--accent); }
+.meeting-overview-icon { display: grid; flex: 0 0 auto; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 6px; background: var(--surface-soft); color: var(--primary-light); }
+.metric-today .meeting-overview-icon { color: var(--info); }
+.metric-week .meeting-overview-icon { color: var(--primary-light); }
+.metric-preparation .meeting-overview-icon { background: var(--accent-light); color: var(--accent-hover); }
+.metric-followups .meeting-overview-icon { color: var(--warning); }
+.meeting-overview-copy { display: flex; flex: 1; flex-direction: column; min-width: 0; }
+.meeting-overview-copy strong { overflow: hidden; color: var(--text-primary); font-size: 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
+.meeting-overview-copy small { margin-top: 0.03rem; color: var(--text-muted); font-size: 0.6rem; }
+.meeting-overview-item b { color: var(--primary-light); font-family: var(--font-heading); font-size: 0.98rem; font-variant-numeric: tabular-nums; }
+@media (max-width: 700px) {
+  .meeting-overview-item { align-items: flex-start; flex-wrap: wrap; gap: 0.3rem; min-height: 3.8rem; padding: 0.45rem 0.5rem; }
+  .meeting-overview-icon { width: 1.5rem; height: 1.5rem; }
+  .meeting-overview-copy { flex-basis: calc(100% - 1.9rem); }
+  .meeting-overview-copy strong { font-size: 0.61rem; white-space: normal; line-height: 1.2; }
+  .meeting-overview-copy small { display: none; }
+  .meeting-overview-item b { margin-left: auto; font-size: 0.83rem; }
+}

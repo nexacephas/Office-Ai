@@ -1,0 +1,11 @@
+.knowledge-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 0 auto 1.1rem; }
+.knowledge-header > div:first-child { display: grid; gap: 0.27rem; }
+.knowledge-eyebrow { color: var(--accent); font-size: 0.66rem; font-weight: 750; letter-spacing: 0.09em; }
+.knowledge-header h1 { color: var(--primary); font-family: var(--font-heading); font-size: 1.55rem; line-height: 1.25; }
+.knowledge-header p { max-width: 660px; color: var(--text-secondary); font-size: 0.83rem; }
+.knowledge-header-actions { display: flex; flex: 0 0 auto; gap: 0.45rem; }
+.knowledge-header-actions button, .knowledge-primary-button, .knowledge-secondary-button { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.52rem 0.7rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.76rem; font-weight: 650; cursor: pointer; }
+.knowledge-header-actions .knowledge-primary-button, .knowledge-primary-button { border-color: var(--accent); background: var(--accent); color: white; }
+.knowledge-header-actions button:hover, .knowledge-secondary-button:hover { background: var(--surface-soft); }
+.knowledge-header-actions .knowledge-primary-button:hover, .knowledge-primary-button:hover { background: var(--accent-hover); }
+@media (max-width: 700px) { .knowledge-header { align-items: flex-start; flex-direction: column; } .knowledge-header-actions { width: 100%; } .knowledge-header-actions button { flex: 1; } }

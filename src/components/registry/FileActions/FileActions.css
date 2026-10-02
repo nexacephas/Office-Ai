@@ -1,0 +1,37 @@
+.file-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.file-actions.compact {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+  white-space: nowrap;
+  margin-top: 0;
+}
+
+.file-action,
+.file-action-link {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  border-radius: 5px;
+  padding: 0.32rem 0.4rem;
+  font-size: 0.64rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.file-action.danger,
+.file-action-link.danger {
+  color: #b3261e;
+  border-color: #f2d0ce;
+  background: #fff7f7;
+}
+
+.file-action-link {
+  padding: 0.35rem 0.5rem;
+}

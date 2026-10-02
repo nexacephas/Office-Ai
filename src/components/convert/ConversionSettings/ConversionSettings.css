@@ -1,0 +1,60 @@
+.conversion-settings-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.2rem 1rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.settings-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.settings-panel-header h3 {
+  margin: 0;
+  color: #162638;
+}
+
+.settings-panel-header span {
+  color: #4d6280;
+  font-size: 0.8rem;
+}
+
+.settings-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.settings-row label,
+.settings-checkbox {
+  color: #405471;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.settings-row select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 10px;
+  background: #f9fbfd;
+  color: #1b2b3d;
+}
+
+.settings-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 0.15rem;
+  font-weight: 600;
+}
+
+.settings-checkbox input {
+  accent-color: #0b7b5c;
+}

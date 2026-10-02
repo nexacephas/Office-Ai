@@ -1,0 +1,12 @@
+.correspondence-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; min-width: 0; padding: 0.15rem 0; }
+.correspondence-header > div:first-child { min-width: 0; }
+.correspondence-header h1 { font-size: 1.75rem; letter-spacing: -0.035em; line-height: 1.2; }
+.correspondence-header p { max-width: 62ch; margin-top: 0.22rem; color: var(--text-secondary); font-size: 0.82rem; }
+.correspondence-header-actions { display: flex; align-items: center; gap: 0.45rem; }
+@media (max-width: 680px) {
+  .correspondence-header { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
+  .correspondence-header h1 { font-size: 1.5rem; }
+  .correspondence-header p { font-size: 0.74rem; line-height: 1.45; }
+  .correspondence-header-actions { width: 100%; }
+  .correspondence-header-actions button { flex: 1; }
+}

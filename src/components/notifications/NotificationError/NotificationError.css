@@ -1,0 +1,5 @@
+.notification-error { display: grid; justify-items: center; gap: 0.45rem; padding: 2.6rem 1rem; text-align: center; }
+.notification-error-icon { display: grid; width: 42px; height: 42px; margin-bottom: 0.25rem; place-items: center; border-radius: 50%; background: var(--danger-light); color: var(--danger); }
+.notification-error h2 { color: var(--text-primary); font-size: 0.92rem; }
+.notification-error p { color: var(--text-secondary); font-size: 0.78rem; }
+.notification-error button { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.4rem; padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.76rem; font-weight: 600; cursor: pointer; }

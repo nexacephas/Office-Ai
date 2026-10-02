@@ -1,0 +1,24 @@
+.meeting-followups-section,.meeting-history-section { min-width: 0; padding: 0.85rem 0.95rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); box-shadow: var(--shadow-sm); }
+.meeting-followup-count { color: var(--warning); font-size: 0.65rem; font-weight: 700; }
+.meeting-followups-table-wrap { overflow-x: auto; }
+.meeting-followups-table { width: 100%; border-collapse: collapse; text-align: left; }
+.meeting-followups-table thead { background: var(--surface-soft); }
+.meeting-followups-table th { padding: 0.45rem 0.5rem; color: var(--text-secondary); font-size: 0.59rem; font-weight: 650; white-space: nowrap; }
+.meeting-followups-table td { padding: 0.52rem 0.5rem; border-top: 1px solid var(--border-light); color: var(--text-secondary); font-size: 0.63rem; white-space: nowrap; }
+.meeting-followups-table td:first-child button { color: var(--primary-light); font-size: 0.62rem; font-weight: 650; }
+.meeting-followups-table td:first-child button:hover { text-decoration: underline; }
+.meeting-followup-status { display: inline-flex; align-items: center; min-height: 1.2rem; padding: 0.12rem 0.34rem; border-radius: 4px; background: var(--warning-light); color: #8b650e; font-size: 0.57rem; font-weight: 650; text-transform: capitalize; }
+.followup-in-progress { background: var(--info-light); color: var(--info); }
+.followup-completed { background: var(--success-light); color: var(--success); }
+.meeting-followup-create { display: inline-flex; align-items: center; gap: 0.2rem; color: var(--primary-light); font-size: 0.59rem; font-weight: 650; }
+.meeting-followup-create:hover { color: var(--accent-hover); }
+.meeting-followups-cards { display: none; }
+.meeting-followups-empty,.meeting-history-empty { padding: 1rem 0; color: var(--text-secondary); font-size: 0.68rem; }
+@media (max-width: 760px) {
+  .meeting-followups-table { display: none; }
+  .meeting-followups-cards { display: flex; flex-direction: column; }
+  .meeting-followups-cards article { display: flex; flex-direction: column; gap: 0.28rem; padding: 0.62rem 0; border-top: 1px solid var(--border-light); }
+  .meeting-followup-meeting { align-self: flex-start; color: var(--primary-light); font-size: 0.59rem; font-weight: 650; }
+  .meeting-followups-cards article > strong { color: var(--text-primary); font-size: 0.7rem; }
+  .meeting-followups-cards article > div { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; color: var(--text-secondary); font-size: 0.6rem; }
+}

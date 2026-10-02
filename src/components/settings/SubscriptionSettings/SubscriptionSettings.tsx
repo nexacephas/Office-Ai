@@ -1,0 +1,10 @@
+import SettingsIcon from '../SettingsIcon'
+import SettingsSection from '../SettingsSection/SettingsSection'
+import './SubscriptionSettings.css'
+
+type Props = { message: string; isAdmin: boolean; onMessage: (message: string) => void; onUsage: () => void }
+
+export default function SubscriptionSettings({ message, isAdmin, onMessage, onUsage }: Props) {
+  if (!isAdmin) return <SettingsSection eyebrow="PLAN · ADMIN ONLY" title="Subscription" description="Plan details are managed by workspace administrators."><div className="settings-admin-note">Requires administrator permission to view or manage subscription details.</div></SettingsSection>
+  return <SettingsSection eyebrow="PLAN · ADMIN ONLY" title="Subscription" description="Review your current plan and the resources available to your workspace."><div className="subscription-plan"><div><span>Current plan</span><h3>Professional</h3><p>Active · Renews November 1, 2026</p></div><strong>$49 <small>/ user / month</small></strong></div><div className="subscription-metrics"><div><span>Current users</span><strong>24</strong></div><div><span>Included users</span><strong>30</strong></div><div><span>Storage used</span><strong>18.4 GB <small>of 50 GB</small></strong></div><div><span>AI usage</span><strong>2,840 <small>of 5,000</small></strong></div></div><div className="subscription-actions"><button type="button" className="settings-button-primary" onClick={() => onMessage('Plan management is not connected in this frontend preview.')}>Manage plan</button><button type="button" className="settings-button-secondary" onClick={onUsage}>View usage <SettingsIcon name="arrow" size={15} /></button><button type="button" className="settings-button-secondary" onClick={() => onMessage('Sales contact request is not connected in this frontend preview.')}>Contact sales</button></div><p className="subscription-settings-note" role="status" aria-live="polite">{message || 'Plan management is a preview only. No payment processing is enabled.'}</p></SettingsSection>
+}

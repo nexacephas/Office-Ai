@@ -1,0 +1,37 @@
+.registry-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.registry-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  padding: 0.62rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.registry-stat span {
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.registry-stat strong {
+  color: var(--primary);
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.registry-stat:last-child { border-color: #efd4d1; background: #fffafa; }
+.registry-stat:last-child strong { color: var(--danger); }
+
+@media (max-width: 960px) {
+  .registry-stats {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}

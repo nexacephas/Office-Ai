@@ -1,0 +1,56 @@
+.registry-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 0 0 0.7rem;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+
+.registry-header-copy {
+  flex: 1;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.registry-header h1 {
+  margin: 0;
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.registry-header p {
+  margin: 0.45rem 0 0;
+  max-width: 680px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.registry-header-actions {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .registry-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .registry-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,9 @@
+.knowledge-context { display: grid; align-content: start; gap: 0.55rem; padding: 0.9rem; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); }
+.knowledge-context-heading { display: flex; align-items: center; gap: 0.5rem; }
+.knowledge-context-heading > span { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 6px; background: var(--accent-light); color: var(--accent); }
+.knowledge-context h2 { color: var(--primary); font-size: 0.75rem; }
+.knowledge-context p { color: var(--text-secondary); font-size: 0.69rem; line-height: 1.55; }
+.knowledge-context-permission { display: flex; align-items: flex-start; gap: 0.35rem; color: var(--text-secondary); font-size: 0.65rem; line-height: 1.45; }
+.knowledge-context-permission svg { flex: 0 0 auto; color: var(--accent); }
+.knowledge-context-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 0.55rem; padding-top: 0.3rem; border-top: 1px solid var(--border-light); }
+.knowledge-context-actions button { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.3rem 0; border: 0; background: transparent; color: var(--accent); font-size: 0.66rem; font-weight: 650; cursor: pointer; }

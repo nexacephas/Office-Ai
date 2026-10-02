@@ -1,0 +1,37 @@
+.knowledge-detail-backdrop { position: fixed; inset: 0; z-index: var(--z-modal); display: flex; justify-content: flex-end; background: rgba(11,31,51,.32); }
+.knowledge-detail-drawer { display: flex; width: min(100%, 500px); height: 100%; flex-direction: column; background: var(--surface); box-shadow: var(--shadow-lg); animation: knowledge-detail-in 180ms ease-out; }
+.knowledge-detail-drawer > header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.2rem; border-bottom: 1px solid var(--border); }
+.knowledge-detail-drawer > header span { color: var(--accent); font-size: 0.62rem; font-weight: 750; letter-spacing: 0.08em; }
+.knowledge-detail-drawer > header h2 { margin-top: 0.15rem; color: var(--primary); font-family: var(--font-heading); font-size: 1.05rem; }
+.knowledge-detail-drawer > header button { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--text-secondary); cursor: pointer; }
+.knowledge-detail-body { flex: 1; overflow: auto; padding: 1rem 1.2rem; }
+.knowledge-detail-title { display: flex; align-items: flex-start; gap: 0.65rem; }
+.knowledge-detail-title > span { display: grid; width: 36px; height: 36px; flex: 0 0 auto; place-items: center; border-radius: 6px; background: var(--accent-light); color: var(--accent); }
+.knowledge-detail-title h3 { margin-bottom: 0.3rem; color: var(--text-primary); font-size: 0.87rem; }
+.knowledge-detail-description { margin: 0.75rem 0; color: var(--text-secondary); font-size: 0.72rem; line-height: 1.55; }
+.knowledge-detail-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; padding: 0.75rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+.knowledge-detail-fields div { display: grid; gap: 0.12rem; }
+.knowledge-detail-fields dt { color: var(--text-muted); font-size: 0.63rem; }
+.knowledge-detail-fields dd { display: flex; align-items: center; gap: 0.2rem; color: var(--text-primary); font-size: 0.7rem; overflow-wrap: anywhere; }
+.knowledge-detail-coverage, .knowledge-detail-related { display: grid; gap: 0.5rem; margin-top: 0.9rem; }
+.knowledge-detail-coverage h3, .knowledge-detail-related > h3 { color: var(--primary); font-size: 0.78rem; }
+.knowledge-detail-coverage > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--border); border-radius: 6px; }
+.knowledge-detail-coverage > div span { display: grid; gap: 0.12rem; padding: 0.55rem; border-left: 1px solid var(--border-light); }
+.knowledge-detail-coverage > div span:first-child { border-left: 0; }
+.knowledge-detail-coverage strong { color: var(--text-primary); font-size: 0.7rem; overflow-wrap: anywhere; }
+.knowledge-detail-coverage small { color: var(--text-secondary); font-size: 0.58rem; }
+.knowledge-detail-related { grid-template-columns: 1fr 1fr; }
+.knowledge-detail-related > h3 { grid-column: 1 / -1; }
+.knowledge-detail-related-group { display: grid; align-content: start; gap: 0.25rem; }
+.knowledge-detail-related-group h4 { color: var(--text-secondary); font-size: 0.64rem; }
+.knowledge-detail-related-group > small { color: var(--text-muted); font-size: 0.62rem; }
+.knowledge-detail-related-group button { display: flex; align-items: center; gap: 0.3rem; min-width: 0; padding: 0.3rem; border: 1px solid var(--border-light); border-radius: 4px; background: var(--surface); color: var(--text-secondary); font-size: 0.61rem; text-align: left; cursor: pointer; }
+.knowledge-detail-related-group button svg:last-child { flex: 0 0 auto; margin-left: auto; }
+.knowledge-detail-related-group button svg:first-child { flex: 0 0 auto; color: var(--accent); }
+.knowledge-detail-actions { display: flex; flex-wrap: wrap; gap: 0.38rem; padding: 0.75rem 1rem; border-top: 1px solid var(--border); }
+.knowledge-detail-actions button { display: inline-flex; align-items: center; gap: 0.28rem; min-height: 32px; padding: 0.35rem 0.45rem; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--text-primary); font-size: 0.64rem; font-weight: 600; cursor: pointer; }
+.knowledge-detail-actions button:nth-child(2) { color: var(--danger); }
+.knowledge-detail-actions .knowledge-primary-button { border-color: var(--accent); background: var(--accent); color: #fff; }
+.knowledge-detail-actions .knowledge-detail-open { margin-left: auto; }
+@keyframes knowledge-detail-in { from { transform: translateX(18px); opacity: .7; } to { transform: translateX(0); opacity: 1; } }
+@media (max-width: 540px) { .knowledge-detail-drawer { width: 100%; } .knowledge-detail-actions { padding: 0.65rem; } .knowledge-detail-actions button { flex: 1 1 auto; justify-content: center; } .knowledge-detail-actions .knowledge-detail-open { margin-left: 0; } }

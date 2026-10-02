@@ -1,0 +1,8 @@
+.notification-bulk-actions { display: flex; min-height: 42px; align-items: center; flex-wrap: wrap; gap: 0.7rem; padding: 0.45rem 1rem; border-bottom: 1px solid var(--border-light); background: var(--surface-soft); }
+.notification-select-all { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--text-secondary); font-size: 0.72rem; cursor: pointer; }
+.notification-select-all input { accent-color: var(--accent); }
+.notification-selected-count { padding-left: 0.65rem; border-left: 1px solid var(--border); color: var(--text-secondary); font-size: 0.72rem; }
+.notification-bulk-buttons { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.notification-bulk-buttons button { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.34rem 0.5rem; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--text-primary); font-size: 0.69rem; cursor: pointer; }
+.notification-bulk-buttons button:disabled { opacity: 0.55; cursor: wait; }
+@media (max-width: 480px) { .notification-bulk-actions { gap: 0.45rem; padding-inline: 0.7rem; } .notification-selected-count { margin-left: auto; } .notification-bulk-buttons { width: 100%; } .notification-bulk-buttons button { flex: 1; justify-content: center; } }

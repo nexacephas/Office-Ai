@@ -1,0 +1,22 @@
+.knowledge-answer { display: grid; gap: 0.8rem; padding: 1rem; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 7px; background: var(--surface); box-shadow: var(--shadow-sm); }
+.knowledge-answer-label { display: flex; align-items: center; gap: 0.4rem; color: var(--accent); font-size: 0.65rem; font-weight: 750; letter-spacing: 0.06em; }
+.knowledge-answer-label span { margin-left: auto; padding: 0.2rem 0.4rem; border-radius: 4px; background: var(--surface-soft); color: var(--text-secondary); font-size: 0.59rem; font-weight: 550; letter-spacing: 0; }
+.knowledge-answer-question { padding-bottom: 0.65rem; border-bottom: 1px solid var(--border-light); }
+.knowledge-answer-question small { color: var(--text-muted); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.05em; }
+.knowledge-answer-question h2 { margin-top: 0.2rem; color: var(--primary); font-size: 0.88rem; line-height: 1.45; }
+.knowledge-answer-copy h3, .knowledge-answer-source-heading h3 { color: var(--primary); font-size: 0.76rem; }
+.knowledge-answer-copy p { margin-top: 0.25rem; color: var(--text-primary); font-size: 0.77rem; line-height: 1.7; }
+.knowledge-answer-source-block { display: grid; gap: 0.45rem; padding-top: 0.65rem; border-top: 1px solid var(--border-light); }
+.knowledge-answer-source-heading { display: flex; align-items: center; justify-content: space-between; }
+.knowledge-answer-source-heading span { color: var(--text-secondary); font-size: 0.64rem; }
+.knowledge-answer-searching { display: flex; align-items: center; gap: 0.65rem; padding: 0.7rem 0; }
+.knowledge-answer-searching div { display: grid; gap: 0.18rem; }
+.knowledge-answer-searching strong { color: var(--text-primary); font-size: 0.76rem; }
+.knowledge-answer-searching small { color: var(--text-secondary); font-size: 0.68rem; }
+.knowledge-search-pulse { width: 18px; height: 18px; flex: 0 0 auto; border: 2px solid var(--accent-light); border-top-color: var(--accent); border-radius: 50%; animation: knowledge-answer-spin 0.8s linear infinite; }
+.knowledge-answer-loading-lines { display: grid; gap: 0.45rem; }
+.knowledge-answer-loading-lines i { height: 10px; border-radius: 5px; background: var(--surface-soft); animation: knowledge-answer-pulse 1.2s ease-in-out infinite alternate; }
+.knowledge-answer-loading-lines i:nth-child(2) { width: 84%; }.knowledge-answer-loading-lines i:nth-child(3) { width: 62%; }
+@keyframes knowledge-answer-spin { to { transform: rotate(360deg); } }
+@keyframes knowledge-answer-pulse { to { opacity: 0.45; } }
+@media (max-width: 480px) { .knowledge-answer { padding: 0.8rem; } .knowledge-answer-label { flex-wrap: wrap; } .knowledge-answer-label span { margin-left: 0; } }

@@ -1,0 +1,3 @@
+.settings-admin-note { padding: 0.68rem 0.75rem; border-left: 3px solid var(--warning); background: var(--warning-light); color: #765000; font-size: 0.71rem; line-height: 1.5; }
+.settings-field input:read-only { background: var(--surface-soft); color: var(--text-secondary); }
+.settings-field input:disabled, .settings-field select:disabled { opacity: 0.65; cursor: not-allowed; }

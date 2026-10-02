@@ -1,0 +1,20 @@
+.settings-choice-group { display: grid; gap: 1rem; }
+.settings-choice-group fieldset { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 0; }
+.settings-choice-group legend { color: var(--text-primary); font-size: 0.76rem; font-weight: 650; }
+.settings-segmented { display: inline-flex; padding: 3px; border: 1px solid var(--border); border-radius: 7px; background: var(--surface-soft); }
+.settings-segmented button { min-width: 90px; padding: 0.42rem 0.6rem; border: 0; border-radius: 5px; background: transparent; color: var(--text-secondary); font-size: 0.72rem; cursor: pointer; }
+.settings-segmented button.is-selected { background: var(--surface); color: var(--accent); box-shadow: var(--shadow-sm); font-weight: 700; }
+.appearance-preview { display: flex; min-height: 138px; overflow: hidden; border: 1px solid var(--border); border-radius: 7px; background: #fff; color: #17212b; }
+.appearance-preview.theme-dark { background: #0f2436; color: #f1f5f9; }
+.appearance-preview-sidebar { display: grid; width: 110px; flex: 0 0 auto; align-content: start; gap: 0.65rem; padding: 1rem 0.8rem; border-right: 1px solid #e2e8f0; background: #f8fafc; }
+.theme-dark .appearance-preview-sidebar { border-color: #203b50; background: #142d42; }
+.appearance-preview-sidebar i, .appearance-preview-content div { height: 8px; border-radius: 5px; background: #cbd5e1; }
+.appearance-preview-sidebar i:first-child { width: 75%; background: #168a5b; }
+.appearance-preview-content { display: grid; flex: 1; align-content: start; gap: 0.35rem; padding: 1.1rem; }
+.appearance-preview-content strong { font-size: 0.78rem; }
+.appearance-preview-content span { color: var(--text-secondary); font-size: 0.65rem; }
+.appearance-preview-content div { width: min(100%, 250px); height: 42px; margin-top: 0.35rem; background: #f1f5f9; }
+.theme-dark .appearance-preview-content div { background: #142d42; }
+.appearance-preview.density-compact { min-height: 112px; }
+.appearance-preview.density-compact .appearance-preview-content { gap: 0.2rem; padding-block: 0.75rem; }
+@media (max-width: 520px) { .settings-choice-group fieldset { align-items: flex-start; flex-direction: column; } .settings-segmented { width: 100%; } .settings-segmented button { flex: 1; min-width: 0; } .appearance-preview-sidebar { width: 76px; } }

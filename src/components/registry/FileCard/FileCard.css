@@ -1,0 +1,58 @@
+.registry-file-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.registry-file-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.registry-card-number {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.registry-file-card-header h4 {
+  margin: 0.35rem 0 0;
+  color: var(--text-primary);
+}
+
+.registry-file-card dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.registry-file-card dl div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.registry-file-card dt {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.registry-file-card dd {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.registry-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}

@@ -1,0 +1,58 @@
+.conversion-tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.1rem 1rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 18px;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.conversion-tool-card:hover {
+  transform: translateY(-2px);
+  border-color: #a9c9bc;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+}
+
+.conversion-tool-card.is-selected {
+  border-color: #0f9d73;
+  background: linear-gradient(180deg, #f1fbf8 0%, #ffffff 100%);
+  box-shadow: 0 16px 28px rgba(15, 157, 115, 0.12);
+}
+
+.tool-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tool-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ecf8f4;
+  color: #0b7b5c;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.tool-card-arrow {
+  color: #7d8ca5;
+  font-size: 1.3rem;
+}
+
+.conversion-tool-card strong {
+  font-size: 1.05rem;
+  color: #132238;
+}
+
+.conversion-tool-card small {
+  color: #586c86;
+  line-height: 1.5;
+}

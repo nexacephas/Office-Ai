@@ -1,0 +1,12 @@
+.settings-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.settings-field { display: grid; min-width: 0; gap: 0.35rem; }
+.settings-field > span { color: var(--text-primary); font-size: 0.75rem; font-weight: 650; }
+.settings-field input, .settings-field select { width: 100%; min-width: 0; height: 39px; padding: 0 0.65rem; border: 1px solid var(--border); border-radius: 6px; outline: 0; background: var(--surface); color: var(--text-primary); font-size: 0.78rem; }
+.settings-field input:focus, .settings-field select:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
+.settings-field-wide { grid-column: 1 / -1; }
+.settings-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; padding-top: 0.9rem; border-top: 1px solid var(--border-light); }
+.settings-form-actions { display: flex; gap: 0.45rem; }
+.settings-form-actions button, .settings-button-primary, .settings-button-secondary { min-height: 36px; padding: 0.45rem 0.72rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.74rem; font-weight: 600; cursor: pointer; }
+.settings-form-actions .settings-button-primary { border-color: var(--accent); background: var(--accent); color: white; }
+.settings-form-actions button:disabled { opacity: 0.55; cursor: wait; }
+@media (max-width: 520px) { .settings-form-grid { grid-template-columns: 1fr; } .settings-field-wide { grid-column: auto; } .settings-form-footer { align-items: flex-start; flex-direction: column; } .settings-form-actions { width: 100%; } .settings-form-actions button { flex: 1; } }

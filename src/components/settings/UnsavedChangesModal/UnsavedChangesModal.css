@@ -1,0 +1,14 @@
+.settings-modal-backdrop { position: fixed; inset: 0; z-index: var(--z-modal); display: grid; place-items: center; padding: 1rem; background: rgba(11, 31, 51, 0.35); }
+.settings-confirm-modal { position: relative; width: min(100%, 420px); padding: 1.4rem; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); box-shadow: var(--shadow-lg); }
+.settings-modal-close { position: absolute; top: 0.8rem; right: 0.8rem; display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-secondary); cursor: pointer; }
+.settings-confirm-icon { display: grid; width: 40px; height: 40px; margin-bottom: 0.8rem; place-items: center; border-radius: 8px; background: var(--warning-light); color: #986600; }
+.settings-confirm-icon.is-danger { background: var(--danger-light); color: var(--danger); }
+.settings-confirm-modal h2 { color: var(--text-primary); font-size: 1rem; }
+.settings-confirm-modal p { margin-top: 0.35rem; color: var(--text-secondary); font-size: 0.81rem; line-height: 1.55; }
+.settings-confirm-phrase { display: grid; gap: 0.4rem; margin-top: 1rem; color: var(--text-secondary); font-size: 0.76rem; }
+.settings-confirm-phrase input { height: 38px; padding: 0 0.65rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); }
+.settings-modal-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.2rem; }
+.settings-modal-actions button { min-height: 36px; padding: 0.45rem 0.75rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.76rem; font-weight: 600; cursor: pointer; }
+.settings-modal-actions .settings-modal-confirm { border-color: var(--accent); background: var(--accent); color: white; }
+.settings-modal-actions .settings-modal-danger { border-color: var(--danger); background: var(--danger); color: white; }
+.settings-modal-actions button:disabled { opacity: 0.5; cursor: not-allowed; }

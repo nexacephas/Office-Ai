@@ -1,0 +1,25 @@
+.correspondence-ai-draft-layer { z-index: calc(var(--z-modal) + 2); align-items: center; justify-content: center; padding: 1rem; }
+.correspondence-ai-draft-modal { position: relative; z-index: 1; display: flex; flex-direction: column; width: min(42rem, 100%); max-height: min(90vh, 46rem); overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-lg); }
+.correspondence-ai-draft-body { display: flex; flex-direction: column; gap: 0.7rem; padding: 0.95rem 1rem; }
+.correspondence-ai-prompt { display: flex; flex-direction: column; gap: 0.3rem; color: var(--text-secondary); font-size: 0.66rem; font-weight: 650; }
+.correspondence-ai-prompt textarea { width: 100%; padding: 0.6rem; border: 1px solid var(--border); border-radius: 6px; outline: 0; color: var(--text-primary); font-family: var(--font-body); font-size: 0.7rem; line-height: 1.55; resize: vertical; }
+.correspondence-ai-prompt textarea:focus { border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(22,58,89,.07); }
+.correspondence-ai-draft-body > .correspondence-primary-button { align-self: flex-start; min-height: 2rem; font-size: 0.66rem; }
+.correspondence-ai-draft-body > .correspondence-primary-button:disabled { opacity: 0.58; }
+.correspondence-generated-draft { overflow: hidden; border: 1px solid var(--border); border-radius: 7px; }
+.correspondence-generated-heading { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; padding: 0.55rem 0.65rem; border-bottom: 1px solid var(--border-light); background: var(--surface-soft); }
+.correspondence-generated-heading > div:first-child { display: flex; flex-direction: column; }
+.correspondence-generated-heading strong { color: var(--text-primary); font-size: 0.68rem; }
+.correspondence-generated-heading small { color: var(--text-muted); font-size: 0.57rem; }
+.correspondence-generated-heading > div:last-child { display: flex; align-items: center; gap: 0.6rem; }
+.correspondence-generated-heading .correspondence-text-action { font-size: 0.62rem; }
+.correspondence-generated-draft textarea { display: block; width: 100%; min-height: 11rem; padding: 0.7rem; border: 0; outline: 0; background: var(--surface); color: var(--text-primary); font-family: var(--font-body); font-size: 0.69rem; line-height: 1.7; resize: vertical; }
+.correspondence-ai-draft-modal > footer { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; padding: 0.65rem 1rem; border-top: 1px solid var(--border-light); }
+.correspondence-ai-draft-modal > footer > div { display: flex; gap: 0.4rem; }
+.correspondence-ai-draft-modal > footer button { min-height: 2rem; font-size: 0.65rem; }
+@media (max-width: 560px) {
+  .correspondence-ai-draft-layer { align-items: flex-end; padding: 0; }
+  .correspondence-ai-draft-modal { width: 100%; max-height: 92dvh; border-radius: 15px 15px 0 0; }
+  .correspondence-ai-draft-modal > footer { align-items: flex-start; flex-direction: column; }
+  .correspondence-ai-draft-modal > footer > div { justify-content: flex-end; width: 100%; }
+}

@@ -1,0 +1,71 @@
+.registry-section-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.section-header span {
+  display: block;
+  color: var(--accent);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.section-header h3 {
+  margin: 0.25rem 0 0;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.overdue-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.overdue-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.55rem;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  background: var(--surface-soft);
+}
+
+.overdue-row.header {
+  background: var(--surface-soft);
+  color: var(--text-secondary);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.empty-inline {
+  margin: 0;
+  color: #64748b;
+}
+
+.small {
+  padding: 0.45rem 0.6rem;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 760px) {
+  .overdue-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

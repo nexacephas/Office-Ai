@@ -1,0 +1,90 @@
+.signup-form {
+  gap: var(--space-3);
+}
+
+.signup-plan-summary {
+  display: flex;
+  padding: var(--space-3);
+  margin-bottom: var(--space-5);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border: 1px solid var(--accent-light);
+  border-radius: var(--radius-sm);
+  background: var(--accent-light);
+}
+
+.signup-plan-summary > div {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.signup-plan-name {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.signup-plan-price {
+  color: var(--text-primary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.signup-plan-price span {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.signup-change-plan {
+  flex: 0 0 auto;
+  font-size: 11px;
+}
+
+.signup-terms-block {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.signup-enterprise-confirmation {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+}
+
+.signup-confirmation-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--success-light);
+  border-radius: 50%;
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.signup-confirmation-mark svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.signup-enterprise-confirmation h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.signup-enterprise-confirmation p {
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .signup-form {
+    gap: var(--space-3);
+  }
+}

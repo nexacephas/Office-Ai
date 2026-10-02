@@ -1,0 +1,23 @@
+.correspondence-ai-modal-layer { z-index: calc(var(--z-modal) + 2); align-items: center; justify-content: center; padding: 1rem; }
+.correspondence-ai-modal { position: relative; z-index: 1; width: min(34rem, 100%); max-height: min(88vh, 40rem); overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-lg); }
+.correspondence-ai-modal > header,
+.correspondence-ai-draft-modal > header { display: flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-light); }
+.correspondence-ai-mark { display: grid; flex: 0 0 auto; place-items: center; width: 2rem; height: 2rem; border-radius: 7px; background: var(--accent-light); color: var(--accent-hover); }
+.correspondence-ai-modal > header > div,
+.correspondence-ai-draft-modal > header > div { flex: 1; min-width: 0; }
+.correspondence-ai-modal > header h2,
+.correspondence-ai-draft-modal > header h2 { font-size: 0.9rem; }
+.correspondence-ai-modal .correspondence-eyebrow,
+.correspondence-ai-draft-modal .correspondence-eyebrow { margin-bottom: 0.08rem; font-size: 0.56rem; }
+.correspondence-ai-source { overflow: hidden; padding: 0.65rem 1rem 0; color: var(--text-secondary); font-size: 0.67rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.correspondence-ai-output { margin: 0.65rem 1rem; padding: 0.85rem; border: 1px solid rgba(22,138,91,.18); border-radius: 7px; background: #f7fbf8; }
+.correspondence-ai-output > span { color: var(--accent-hover); font-size: 0.55rem; font-weight: 750; letter-spacing: 0.08em; }
+.correspondence-ai-output p { margin-top: 0.35rem; color: var(--text-primary); font-size: 0.72rem; line-height: 1.65; white-space: pre-line; }
+.correspondence-ai-modal > footer { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; padding: 0.7rem 1rem; border-top: 1px solid var(--border-light); }
+.correspondence-ai-modal > footer p,
+.correspondence-ai-draft-modal > footer > p { color: var(--text-muted); font-size: 0.59rem; }
+.correspondence-ai-modal > footer .correspondence-primary-button { min-height: 2rem; font-size: 0.67rem; }
+@media (max-width: 560px) {
+  .correspondence-ai-modal-layer { align-items: flex-end; padding: 0; }
+  .correspondence-ai-modal { width: 100%; max-height: 90dvh; border-radius: 15px 15px 0 0; }
+}

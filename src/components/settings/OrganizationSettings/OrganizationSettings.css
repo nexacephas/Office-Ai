@@ -1,0 +1,10 @@
+.organization-readonly-banner { padding: 0.7rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface-soft); color: var(--text-secondary); font-size: 0.72rem; }
+.organization-id-row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.6rem; padding: 0.65rem 0; border-bottom: 1px solid var(--border-light); }
+.organization-id-row span, .organization-id-row small { color: var(--text-secondary); font-size: 0.69rem; }
+.organization-id-row strong { color: var(--text-primary); font-size: 0.74rem; }
+.settings-field textarea { width: 100%; padding: 0.55rem 0.65rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font: inherit; font-size: 0.78rem; resize: vertical; }
+.organization-logo-upload { position: relative; display: inline-flex; align-items: center; justify-self: start; gap: 0.35rem; padding: 0.5rem 0.65rem; border: 1px dashed var(--border); border-radius: 6px; background: var(--surface); color: var(--text-secondary); font-size: 0.72rem; cursor: pointer; }
+.organization-logo-upload input { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; }
+.organization-logo-upload:disabled { opacity: 0.55; cursor: not-allowed; }
+.organization-logo-preview { width: 74px; height: 48px; margin-top: 0.45rem; border: 1px solid var(--border); border-radius: 5px; object-fit: contain; }
+@media (max-width: 420px) { .organization-id-row { grid-template-columns: 1fr; gap: 0.2rem; } }

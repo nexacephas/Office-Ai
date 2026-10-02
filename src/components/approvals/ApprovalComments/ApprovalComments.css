@@ -1,0 +1,30 @@
+.approval-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.approval-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.7rem 0.8rem;
+  border-left: 3px solid #dfe7ef;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.approval-comment span {
+  color: #64748b;
+  font-size: 0.72rem;
+}
+
+.approval-comment strong {
+  color: #17212b;
+}
+
+.approval-comment p {
+  margin: 0;
+  color: #17212b;
+  line-height: 1.5;
+}

@@ -1,0 +1,15 @@
+.security-setting-row { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; align-items: center; gap: 0.75rem; padding: 0.8rem 0; border-bottom: 1px solid var(--border-light); }
+.security-setting-icon { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 7px; background: var(--surface-soft); color: var(--primary); }
+.security-setting-row div, .security-session span, .security-activity li span { display: grid; gap: 0.12rem; }
+.security-setting-row strong, .security-session strong, .security-activity strong { color: var(--text-primary); font-size: 0.76rem; }
+.security-setting-row small, .security-session small, .security-activity small { color: var(--text-secondary); font-size: 0.68rem; }
+.security-setting-row button, .settings-subheading button { padding: 0.42rem 0.58rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.7rem; font-weight: 600; cursor: pointer; }
+.settings-subheading { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding-top: 0.6rem; }
+.settings-subheading h3 { color: var(--primary); font-size: 0.78rem; }
+.security-session { display: flex; align-items: center; gap: 0.65rem; padding: 0.65rem 0; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.security-session b { margin-left: auto; color: var(--accent); font-size: 0.65rem; }
+.security-activity { display: grid; gap: 0.75rem; margin-top: 0.65rem; list-style: none; }
+.security-activity li { display: flex; align-items: flex-start; gap: 0.6rem; }
+.security-activity li i { width: 8px; height: 8px; margin-top: 0.3rem; border-radius: 50%; background: var(--accent); }
+.settings-inline-message { padding: 0.6rem 0; color: var(--accent); font-size: 0.74rem; }
+@media (max-width: 520px) { .security-setting-row { grid-template-columns: 34px minmax(0, 1fr); } .security-setting-row button { grid-column: 2; justify-self: start; } .settings-subheading { align-items: flex-start; flex-direction: column; } }

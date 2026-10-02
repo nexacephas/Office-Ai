@@ -1,0 +1,3 @@
+.notification-group + .notification-group { border-top: 1px solid var(--border); }
+.notification-group h2 { padding: 0.72rem 1rem 0.6rem; color: var(--text-secondary); font-size: 0.72rem; font-weight: 700; }
+.notification-group-items { display: grid; }

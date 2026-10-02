@@ -1,0 +1,17 @@
+.recent-knowledge { display: grid; gap: 0.55rem; padding: 0.85rem; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); }
+.recent-knowledge > header { display: flex; align-items: center; justify-content: space-between; color: var(--text-muted); }
+.recent-knowledge > header div { display: grid; gap: 0.12rem; }
+.recent-knowledge > header span { color: var(--accent); font-size: 0.61rem; font-weight: 750; letter-spacing: 0.07em; }
+.recent-knowledge h2 { color: var(--primary); font-family: var(--font-heading); font-size: 0.9rem; }
+.recent-knowledge-list { display: grid; }
+.recent-knowledge-list button { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; align-items: center; gap: 0.5rem; padding: 0.55rem 0; border: 0; border-top: 1px solid var(--border-light); background: transparent; text-align: left; cursor: pointer; }
+.recent-knowledge-file { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 6px; background: var(--surface-soft); color: var(--primary); }
+.recent-knowledge-copy { display: grid; min-width: 0; gap: 0.1rem; }
+.recent-knowledge-copy strong { overflow: hidden; color: var(--text-primary); font-size: 0.68rem; text-overflow: ellipsis; white-space: nowrap; }
+.recent-knowledge-copy small { color: var(--text-muted); font-size: 0.6rem; }
+.knowledge-status { padding: 0.16rem 0.36rem; border-radius: 4px; background: var(--surface-soft); color: var(--text-secondary); font-size: 0.58rem; font-weight: 650; white-space: nowrap; }
+.knowledge-status.status-ready { background: var(--accent-light); color: var(--accent); }
+.knowledge-status.status-processing { background: var(--info-light); color: var(--info); }
+.knowledge-status.status-needs-review { background: var(--warning-light); color: #856000; }
+.knowledge-status.status-failed { background: var(--danger-light); color: var(--danger); }
+@media (max-width: 440px) { .recent-knowledge-list button { grid-template-columns: 28px minmax(0, 1fr); } .recent-knowledge-list .knowledge-status { grid-column: 2; justify-self: start; } }

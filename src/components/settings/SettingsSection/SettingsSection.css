@@ -1,0 +1,7 @@
+.settings-section { min-width: 0; }
+.settings-section-header { padding: 1.4rem 1.5rem 1.15rem; border-bottom: 1px solid var(--border-light); }
+.settings-section-header > span { color: var(--accent); font-size: 0.65rem; font-weight: 750; letter-spacing: 0.08em; }
+.settings-section-header h2 { margin-top: 0.25rem; color: var(--primary); font-family: var(--font-heading); font-size: 1.25rem; line-height: 1.35; }
+.settings-section-header p { margin-top: 0.35rem; color: var(--text-secondary); font-size: 0.8rem; line-height: 1.55; }
+.settings-section-content { display: grid; gap: 1rem; padding: 1.35rem 1.5rem 1.5rem; }
+@media (max-width: 520px) { .settings-section-header { padding: 1.1rem 1rem 0.9rem; } .settings-section-content { padding: 1rem; } }

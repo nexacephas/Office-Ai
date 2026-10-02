@@ -1,0 +1,21 @@
+.ai-summary-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ebeff5;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f8fbff 0%, #fff 100%);
+}
+
+.ai-summary-box p {
+  margin: 0;
+  color: #42556f;
+  line-height: 1.6;
+}
+
+.ai-summary-box ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.45rem;
+  color: #1d2d40;
+}

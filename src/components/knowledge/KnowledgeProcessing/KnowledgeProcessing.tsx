@@ -1,0 +1,8 @@
+import KnowledgeIcon from '../KnowledgeIcon'
+import './KnowledgeProcessing.css'
+
+const steps = ['Upload document', 'Extract text', 'Index content', 'Knowledge ready']
+
+export default function KnowledgeProcessing({ title, step, ready, onClose }: { title: string; step: number; ready: boolean; onClose: () => void }) {
+  return <div className="knowledge-modal-backdrop" role="presentation"><section className="knowledge-processing-modal" role="dialog" aria-modal="true" aria-labelledby="knowledge-processing-title"><span className={`knowledge-processing-icon${ready ? ' is-ready' : ''}`}><KnowledgeIcon name={ready ? 'check' : 'database'} size={21} /></span><span className="knowledge-processing-eyebrow">KNOWLEDGE SOURCE</span><h2 id="knowledge-processing-title">{ready ? 'Knowledge source ready' : 'Preparing your source'}</h2><p>{title}</p><ol>{steps.map((label, index) => <li className={index < step || ready ? 'is-complete' : index === step ? 'is-current' : ''} key={label}><span>{index < step || ready ? <KnowledgeIcon name="check" size={13} /> : index + 1}</span><strong>{label}</strong><small>{index < step || ready ? 'Complete' : index === step ? 'In progress' : 'Waiting'}</small></li>)}</ol>{ready ? <button type="button" className="knowledge-primary-button" onClick={onClose}>Done <KnowledgeIcon name="check" size={15} /></button> : <div className="knowledge-processing-foot"><i />Preparing for AI search. You can keep browsing.</div>}</section></div>
+}

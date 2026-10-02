@@ -1,0 +1,39 @@
+.related-work-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.related-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.related-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border: 1px solid #ebf0f5;
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 0.75rem 0.8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.related-item span {
+  color: #64748b;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.related-item strong {
+  color: #17212b;
+}

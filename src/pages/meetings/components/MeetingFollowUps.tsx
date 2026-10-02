@@ -1,0 +1,13 @@
+import type { MeetingFollowUp } from '../meetingTypes'
+import MeetingIcon from './MeetingIcon'
+import './MeetingFollowUps.css'
+
+interface MeetingFollowUpsProps {
+  items: MeetingFollowUp[]
+  onOpenMeeting: (meetingId: string) => void
+  onCreateTask: (item: MeetingFollowUp) => void
+}
+
+export default function MeetingFollowUps({ items, onOpenMeeting, onCreateTask }: MeetingFollowUpsProps) {
+  return <section className="meeting-followups-section" aria-labelledby="meeting-followups-heading"><div className="meetings-section-header"><div><span className="meetings-eyebrow">KEEP MOMENTUM</span><h2 id="meeting-followups-heading">Follow-ups</h2><p>Actions connected to recent meeting decisions.</p></div><span className="meeting-followup-count">{items.filter((item) => item.status !== 'completed').length} open</span></div>{items.length ? <div className="meeting-followups-table-wrap"><table className="meeting-followups-table"><thead><tr><th>Meeting</th><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th><th><span className="sr-only">Action</span></th></tr></thead><tbody>{items.map((item) => <tr key={item.id}><td><button type="button" onClick={() => onOpenMeeting(item.meetingId)}>{item.meetingTitle}</button></td><td>{item.action}</td><td>{item.owner}</td><td>{new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(new Date(`${item.dueDate}T12:00:00`))}</td><td><span className={`meeting-followup-status followup-${item.status}`}>{item.status.replace('-', ' ')}</span></td><td>{item.status !== 'completed' && <button type="button" className="meeting-followup-create" onClick={() => onCreateTask(item)}><MeetingIcon name="plus" size={14} />{item.status === 'pending' ? 'Create Task' : 'Open Task'}</button>}</td></tr>)}</tbody></table><div className="meeting-followups-cards">{items.map((item) => <article key={item.id}><button type="button" className="meeting-followup-meeting" onClick={() => onOpenMeeting(item.meetingId)}>{item.meetingTitle}</button><strong>{item.action}</strong><div><span>{item.owner}</span><time>{new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(new Date(`${item.dueDate}T12:00:00`))}</time></div><div><span className={`meeting-followup-status followup-${item.status}`}>{item.status.replace('-', ' ')}</span>{item.status !== 'completed' && <button type="button" className="meeting-followup-create" onClick={() => onCreateTask(item)}><MeetingIcon name="plus" size={13} />{item.status === 'pending' ? 'Create Task' : 'Open Task'}</button>}</div></article>)}</div></div> : <div className="meeting-followups-empty">No follow-ups to track. Meeting decisions and action items will appear here.</div>}</section>
+}

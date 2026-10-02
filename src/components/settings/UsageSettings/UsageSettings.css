@@ -1,0 +1,10 @@
+.usage-period { display: flex; justify-content: space-between; gap: 0.6rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); font-size: 0.7rem; }
+.usage-period strong { color: var(--text-primary); font-weight: 600; }
+.usage-list { display: grid; gap: 1.1rem; }
+.usage-meter { display: grid; gap: 0.35rem; }
+.usage-meter-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 0.7rem; }
+.usage-meter-heading strong { color: var(--text-primary); font-size: 0.76rem; }
+.usage-meter-heading span, .usage-meter small { color: var(--text-secondary); font-size: 0.68rem; }
+.usage-track { height: 8px; overflow: hidden; border-radius: 8px; background: var(--surface-soft); }
+.usage-track i { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+@media (max-width: 420px) { .usage-period, .usage-meter-heading { align-items: flex-start; flex-direction: column; gap: 0.2rem; } }

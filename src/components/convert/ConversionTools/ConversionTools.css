@@ -1,0 +1,19 @@
+.conversion-tools-section {
+  margin-bottom: 1.6rem;
+}
+
+.convert-section-heading {
+  margin-bottom: 0.8rem;
+}
+
+.convert-section-heading h2 {
+  margin: 0;
+  color: #172437;
+  font-size: 1.25rem;
+}
+
+.conversion-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 0.9rem;
+}

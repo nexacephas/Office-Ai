@@ -1,0 +1,10 @@
+.knowledge-source-card { display: grid; gap: 0.55rem; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); }
+.knowledge-source-card-title { display: flex; align-items: center; gap: 0.5rem; min-width: 0; padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; }
+.knowledge-source-card-title span { display: grid; width: 30px; height: 30px; flex: 0 0 auto; place-items: center; border-radius: 6px; background: var(--surface-soft); color: var(--primary); }
+.knowledge-source-card-title strong { overflow: hidden; color: var(--primary); font-size: 0.72rem; text-overflow: ellipsis; white-space: nowrap; }
+.knowledge-source-card-info { display: flex; flex-wrap: wrap; gap: 0.3rem; color: var(--text-secondary); font-size: 0.63rem; }
+.knowledge-source-card-info > span:not(.knowledge-status) { padding: 0.15rem 0.3rem; border-radius: 4px; background: var(--surface-soft); }
+.knowledge-source-card-actions { display: flex; flex-wrap: wrap; gap: 0.35rem; padding-top: 0.45rem; border-top: 1px solid var(--border-light); }
+.knowledge-source-card-actions button { display: inline-flex; align-items: center; justify-content: center; gap: 0.25rem; padding: 0.3rem 0.4rem; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: var(--text-secondary); font-size: 0.62rem; font-weight: 600; cursor: pointer; }
+.knowledge-source-card-actions button:hover { border-color: var(--accent); color: var(--accent); }
+.knowledge-source-card-actions button:last-child { margin-left: auto; color: var(--danger); }

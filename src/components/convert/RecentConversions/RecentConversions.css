@@ -1,0 +1,35 @@
+.recent-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent-item small,
+.history-item small {
+  color: #60718a;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.status-pill.completed {
+  background: #eafaf3;
+  color: #0b7b5c;
+}
+
+.status-pill.processing {
+  background: #fff4d6;
+  color: #9d6e15;
+}
+
+.status-pill.failed {
+  background: #fde7e8;
+  color: #b42318;
+}

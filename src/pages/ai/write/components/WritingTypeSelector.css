@@ -1,0 +1,95 @@
+.writing-type-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.writing-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.writing-section-heading h2 {
+  font-size: 0.86rem;
+  letter-spacing: -0.02em;
+}
+
+.writing-section-heading p {
+  margin-top: 0.15rem;
+  color: var(--text-secondary);
+  font-size: 0.6rem;
+}
+
+.writing-section-heading > span {
+  color: var(--text-muted);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.writing-type-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.writing-type-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-height: 4.2rem;
+  padding: 0.65rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-soft);
+  text-align: left;
+}
+
+.writing-type-card.is-active,
+.writing-type-card:hover {
+  border-color: rgba(22, 138, 91, 0.35);
+  background: var(--accent-light);
+}
+
+.writing-type-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 7px;
+  background: rgba(22, 138, 91, 0.08);
+  color: var(--accent-hover);
+}
+
+.writing-type-card > span:last-child {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.writing-type-card strong {
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
+
+.writing-type-card small {
+  margin-top: 0.12rem;
+  color: var(--text-secondary);
+  font-size: 0.54rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 600px) {
+  .writing-type-list {
+    grid-template-columns: 1fr;
+  }
+}

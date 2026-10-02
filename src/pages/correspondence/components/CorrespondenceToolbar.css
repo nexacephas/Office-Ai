@@ -1,0 +1,44 @@
+.correspondence-toolbar { display: flex; flex-direction: column; gap: 0.55rem; min-width: 0; }
+.correspondence-search { display: flex; align-items: center; gap: 0.5rem; min-height: 2.45rem; padding: 0 0.7rem; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); color: var(--text-muted); }
+.correspondence-search:focus-within { border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(22,58,89,.07); }
+.correspondence-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--text-primary); font-size: 0.74rem; }
+.correspondence-search input::placeholder { color: var(--text-muted); }
+.correspondence-search input::-webkit-search-cancel-button { display: none; }
+.correspondence-search > button { display: grid; place-items: center; width: 1.55rem; height: 1.55rem; color: var(--text-muted); }
+.correspondence-filter-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; }
+.correspondence-select,
+.correspondence-sort { position: relative; display: inline-flex; align-items: center; gap: 0.35rem; min-height: 2rem; padding: 0.32rem 0.48rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-secondary); }
+.correspondence-select > span { color: var(--text-muted); font-size: 0.63rem; }
+.correspondence-select select,
+.correspondence-sort select { max-width: 8rem; padding: 0; border: 0; outline: 0; appearance: none; background: transparent; color: var(--text-primary); font-size: 0.67rem; cursor: pointer; }
+.correspondence-select > svg:last-child,
+.correspondence-sort > svg:last-child { pointer-events: none; color: var(--text-muted); }
+.correspondence-sort { margin-left: auto; }
+.correspondence-sort select { max-width: 7.5rem; }
+.correspondence-mobile-filter-row { display: none; }
+.correspondence-filter-sheet-layer { position: fixed; z-index: calc(var(--z-modal) + 1); inset: 0; display: flex; align-items: flex-end; }
+.correspondence-filter-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; background: rgba(11,31,51,.42); }
+.correspondence-filter-sheet { position: relative; z-index: 1; display: flex; flex-direction: column; width: 100%; max-height: 90dvh; overflow-y: auto; padding: 1rem; border-radius: 16px 16px 0 0; background: var(--surface); box-shadow: var(--shadow-lg); }
+.correspondence-filter-sheet > header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-light); }
+.correspondence-filter-sheet h2 { font-size: 1rem; }
+.correspondence-filter-sheet-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; padding: 0.85rem 0; }
+.correspondence-filter-sheet-fields .correspondence-select { align-items: flex-start; flex-direction: column; gap: 0.2rem; min-height: 3rem; padding: 0.45rem 0.55rem; }
+.correspondence-filter-sheet-fields .correspondence-select select { width: 100%; max-width: none; }
+.correspondence-filter-sheet-fields .correspondence-sort { grid-column: 1 / -1; margin-left: 0; }
+.correspondence-filter-sheet > footer { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light); }
+.correspondence-reset-filter { color: var(--text-secondary); font-size: 0.72rem; font-weight: 650; }
+.correspondence-reset-filter:hover { color: var(--primary-light); text-decoration: underline; }
+@media (max-width: 920px) {
+  .correspondence-filter-controls { gap: 0.3rem; }
+  .correspondence-select { padding-inline: 0.4rem; }
+  .correspondence-select > span { display: none; }
+  .correspondence-select select { max-width: 6.9rem; }
+  .correspondence-sort { margin-left: 0; }
+}
+@media (max-width: 680px) {
+  .correspondence-filter-controls { display: none; }
+  .correspondence-mobile-filter-row { display: flex; align-items: center; gap: 0.45rem; }
+  .correspondence-mobile-filter-button { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 2.1rem; padding: 0.4rem 0.55rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.7rem; font-weight: 650; }
+  .correspondence-mobile-filter-button > span { display: inline-grid; place-items: center; min-width: 1.05rem; height: 1.05rem; border-radius: 99px; background: var(--accent-light); color: var(--accent-hover); font-size: 0.58rem; }
+  .correspondence-mobile-sort { margin-left: auto; }
+}

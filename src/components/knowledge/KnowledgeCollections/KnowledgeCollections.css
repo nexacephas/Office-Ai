@@ -1,0 +1,11 @@
+.knowledge-collections { display: grid; gap: 0.65rem; }
+.knowledge-collections > header { display: flex; align-items: flex-end; justify-content: space-between; gap: 0.6rem; }
+.knowledge-collections > header div { display: grid; gap: 0.12rem; }
+.knowledge-collections > header span { color: var(--accent); font-size: 0.62rem; font-weight: 750; letter-spacing: 0.08em; }
+.knowledge-collections h2 { color: var(--primary); font-family: var(--font-heading); font-size: 1rem; }
+.knowledge-collections > header button { padding: 0.25rem 0; border: 0; background: transparent; color: var(--accent); font-size: 0.68rem; font-weight: 650; cursor: pointer; }
+.knowledge-collection-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.55rem; }
+.knowledge-collection-skeletons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.55rem; }
+.knowledge-collection-skeletons i { height: 70px; border-radius: 6px; background: linear-gradient(90deg, var(--surface-soft), var(--border-light), var(--surface-soft)); background-size: 200% 100%; animation: knowledge-shimmer 1.3s infinite; }
+@keyframes knowledge-shimmer { to { background-position: -200% 0; } }
+@media (max-width: 680px) { .knowledge-collection-grid { grid-template-columns: 1fr; } }

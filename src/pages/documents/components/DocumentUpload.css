@@ -1,0 +1,46 @@
+.document-upload-layer { z-index: calc(var(--z-modal) + 2); }
+.document-upload-dialog { position: relative; z-index: 1; display: flex; flex-direction: column; width: min(34rem, 100%); max-height: min(90vh, 42rem); overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-lg); animation: document-action-in 160ms ease-out; }
+.document-upload-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1rem 1.1rem; border-bottom: 1px solid var(--border-light); }
+.document-upload-header h2 { font-size: 1.05rem; }
+.document-upload-header p { margin-top: 0.15rem; color: var(--text-secondary); font-size: 0.72rem; }
+.document-upload-header .documents-eyebrow { margin-bottom: 0.18rem; }
+.document-upload-body { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem 1.1rem; }
+.document-upload-input { display: none; }
+.document-dropzone { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 12.5rem; padding: 1.25rem; border: 1px dashed #b7c7d4; border-radius: var(--radius-md); background: var(--surface-soft); text-align: center; cursor: pointer; transition: background var(--transition-fast), border-color var(--transition-fast); }
+.document-dropzone:hover,
+.document-dropzone.is-dragging { border-color: var(--accent); background: var(--accent-light); }
+.document-dropzone.has-file { border-style: solid; border-color: rgba(22, 138, 91, 0.35); background: #f7fbf8; }
+.document-dropzone-icon { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; margin-bottom: 0.65rem; border-radius: 9px; background: var(--surface); color: var(--accent-hover); box-shadow: var(--shadow-sm); }
+.document-dropzone strong { max-width: 100%; color: var(--text-primary); font-size: 0.84rem; overflow-wrap: anywhere; }
+.document-dropzone p { margin-top: 0.2rem; color: var(--text-secondary); font-size: 0.71rem; }
+.document-dropzone p span,
+.document-change-file { color: var(--primary-light); font-weight: 650; }
+.document-dropzone small { margin-top: 0.9rem; color: var(--text-muted); font-size: 0.62rem; }
+.document-change-file { margin-top: 0.7rem; font-size: 0.68rem; }
+.document-upload-error { color: var(--danger); font-size: 0.71rem; }
+.document-upload-note { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.65rem; border-radius: 6px; background: var(--accent-light); color: var(--accent-hover); }
+.document-upload-note svg { flex: 0 0 auto; margin-top: 0.05rem; }
+.document-upload-note p { color: var(--text-secondary); font-size: 0.66rem; line-height: 1.5; }
+.document-upload-progress { display: flex; flex-direction: column; gap: 0.38rem; }
+.document-upload-progress > div { display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.68rem; }
+.document-upload-progress strong { color: var(--text-primary); }
+.document-progress-track { display: block; height: 0.42rem; overflow: hidden; border-radius: 99px; background: var(--surface-soft); }
+.document-progress-track i { display: block; height: 100%; border-radius: inherit; background: var(--accent); transition: width 100ms linear; }
+.document-upload-progress small { color: var(--text-muted); font-size: 0.62rem; }
+.document-upload-complete { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 12rem; text-align: center; }
+.document-upload-complete > span { display: grid; place-items: center; width: 2.7rem; height: 2.7rem; margin-bottom: 0.6rem; border-radius: 50%; background: var(--success-light); color: var(--success); }
+.document-upload-complete strong { color: var(--text-primary); font-size: 0.84rem; }
+.document-upload-complete p { margin-top: 0.15rem; font-size: 0.7rem; }
+.document-upload-complete small { margin-top: 0.75rem; color: var(--text-muted); font-size: 0.61rem; }
+.document-upload-footer { display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; padding: 0.75rem 1.1rem; border-top: 1px solid var(--border-light); }
+
+@media (max-width: 560px) {
+  .document-upload-layer { align-items: stretch; padding: 0; }
+  .document-upload-dialog { width: 100%; max-height: 100%; border: 0; border-radius: 0; }
+  .document-upload-header,
+  .document-upload-body,
+  .document-upload-footer { padding-inline: 0.9rem; }
+  .document-dropzone { min-height: 10.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) { .document-upload-layer .document-dialog-backdrop, .document-upload-dialog { animation-duration: 1ms; } }

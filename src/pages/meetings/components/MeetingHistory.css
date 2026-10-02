@@ -1,0 +1,19 @@
+.meeting-history-list { display: flex; flex-direction: column; }
+.meeting-history-list article { display: flex; align-items: center; gap: 0.55rem; min-width: 0; padding: 0.58rem 0; border-top: 1px solid var(--border-light); }
+.meeting-history-icon { display: grid; flex: 0 0 auto; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 6px; background: var(--surface-soft); color: var(--primary-light); }
+.meeting-history-list article > div:nth-child(2) { flex: 1; min-width: 0; }
+.meeting-history-title { overflow: hidden; max-width: 100%; color: var(--text-primary); font-size: 0.68rem; font-weight: 700; text-align: left; text-overflow: ellipsis; white-space: nowrap; }
+.meeting-history-title:hover { color: var(--primary-light); text-decoration: underline; }
+.meeting-history-list article > div:nth-child(2) p { margin-top: 0.12rem; color: var(--text-muted); font-size: 0.59rem; }
+.meeting-history-status { display: flex; flex-direction: column; gap: 0.1rem; min-width: 6rem; }
+.meeting-summary-availability { color: var(--text-muted); font-size: 0.58rem; }
+.meeting-summary-availability.is-available { color: var(--success); font-weight: 650; }
+.meeting-history-status small { color: var(--text-secondary); font-size: 0.57rem; }
+.meeting-history-list .meeting-secondary-button { min-height: 1.85rem; padding: 0.3rem 0.45rem; font-size: 0.6rem; }
+.meeting-history-list .meeting-secondary-button svg { margin-left: 0.15rem; }
+@media (max-width: 600px) {
+  .meeting-history-section { padding: 0.75rem; }
+  .meeting-history-list article { flex-wrap: wrap; }
+  .meeting-history-status { margin-left: 2.45rem; }
+  .meeting-history-list .meeting-secondary-button { margin-left: auto; }
+}

@@ -1,0 +1,36 @@
+.knowledge-modal-backdrop { position: fixed; inset: 0; z-index: var(--z-modal); display: grid; place-items: center; padding: 1rem; background: rgba(11,31,51,.34); }
+.add-knowledge-modal { width: min(100%, 740px); max-height: min(92vh, 850px); overflow: auto; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); box-shadow: var(--shadow-lg); }
+.add-knowledge-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.15rem; border-bottom: 1px solid var(--border); }
+.add-knowledge-header > div > span { color: var(--accent); font-size: 0.62rem; font-weight: 750; letter-spacing: 0.07em; }
+.add-knowledge-header h2 { margin-top: 0.15rem; color: var(--primary); font-family: var(--font-heading); font-size: 1.08rem; }
+.add-knowledge-header > button { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--text-secondary); cursor: pointer; }
+.knowledge-add-methods { display: flex; gap: 0.15rem; overflow-x: auto; padding: 0.6rem 1rem 0; border-bottom: 1px solid var(--border-light); }
+.knowledge-add-methods button { flex: 0 0 auto; padding: 0.45rem 0.55rem; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--text-secondary); font-size: 0.68rem; cursor: pointer; }
+.knowledge-add-methods button.is-selected { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+.add-knowledge-modal form { display: grid; gap: 0.85rem; padding: 1rem 1.15rem; }
+.knowledge-dropzone { display: grid; min-height: 116px; justify-items: center; align-content: center; gap: 0.35rem; border: 1px dashed #aab9c6; border-radius: 7px; background: var(--surface-soft); color: var(--text-secondary); text-align: center; cursor: pointer; }
+.knowledge-dropzone input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.knowledge-dropzone > span { color: var(--accent); }
+.knowledge-dropzone strong { color: var(--text-primary); font-size: 0.75rem; }
+.knowledge-dropzone small, .knowledge-method-note { color: var(--text-secondary); font-size: 0.67rem; }
+.knowledge-method-note { padding: 0.55rem; border: 1px solid var(--border); border-radius: 5px; }
+.knowledge-add-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+.knowledge-modal-field { display: grid; min-width: 0; gap: 0.28rem; }
+.knowledge-modal-field > span, .knowledge-visibility legend { color: var(--text-primary); font-size: 0.7rem; font-weight: 650; }
+.knowledge-modal-field input, .knowledge-modal-field select, .knowledge-modal-field textarea { width: 100%; min-width: 0; padding: 0.48rem 0.55rem; border: 1px solid var(--border); border-radius: 5px; outline: 0; background: var(--surface); color: var(--text-primary); font: inherit; font-size: 0.72rem; }
+.knowledge-modal-field input, .knowledge-modal-field select { height: 35px; }
+.knowledge-modal-field textarea { resize: vertical; }
+.knowledge-modal-field input:focus, .knowledge-modal-field select:focus, .knowledge-modal-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
+.knowledge-modal-wide { grid-column: 1 / -1; }
+.knowledge-visibility { display: grid; gap: 0.5rem; padding: 0.7rem; border: 1px solid var(--border); border-radius: 6px; }
+.knowledge-visibility label { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.3rem 0; cursor: pointer; }
+.knowledge-visibility input { margin-top: 0.16rem; accent-color: var(--accent); }
+.knowledge-visibility label span { display: grid; gap: 0.1rem; }
+.knowledge-visibility strong { color: var(--text-primary); font-size: 0.69rem; }
+.knowledge-visibility small { color: var(--text-secondary); font-size: 0.64rem; line-height: 1.45; }
+.knowledge-add-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.65rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light); }
+.knowledge-add-footer > span { color: var(--text-muted); font-size: 0.62rem; }
+.knowledge-add-footer > div { display: flex; gap: 0.4rem; }
+.knowledge-add-footer > div > button:first-child { padding: 0.4rem 0.55rem; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--text-primary); font-size: 0.68rem; cursor: pointer; }
+.knowledge-add-footer .knowledge-primary-button { min-height: 34px; font-size: 0.67rem; }
+@media (max-width: 540px) { .knowledge-modal-backdrop { padding: 0; align-items: end; } .add-knowledge-modal { max-height: 94dvh; border-radius: 11px 11px 0 0; } .knowledge-add-form-grid { grid-template-columns: 1fr; } .knowledge-modal-wide { grid-column: auto; } .knowledge-add-footer { align-items: flex-start; flex-direction: column; } .knowledge-add-footer > div { width: 100%; } .knowledge-add-footer > div button { flex: 1; justify-content: center; } }

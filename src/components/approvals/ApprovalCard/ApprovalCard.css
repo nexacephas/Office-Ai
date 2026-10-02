@@ -1,0 +1,35 @@
+.approval-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  text-align: left;
+  cursor: pointer;
+}
+
+.approval-card__top,
+.approval-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.approval-card__top strong {
+  color: var(--text-primary);
+  font-size: 0.78rem;
+}
+
+.approval-card__meta {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+.approval-card__meta.compact {
+  flex-direction: column;
+  align-items: flex-start;
+}

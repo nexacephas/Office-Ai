@@ -1,0 +1,38 @@
+.settings-page { width: min(100%, 1320px); min-width: 0; margin: 0 auto; padding-bottom: 2rem; color: var(--text-primary); }
+.settings-page-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 0 auto 1.15rem; }
+.settings-page-heading > div:first-child > span { color: var(--accent); font-size: 0.66rem; font-weight: 750; letter-spacing: 0.09em; }
+.settings-page-heading h1 { margin-top: 0.2rem; color: var(--primary); font-family: var(--font-heading); font-size: 1.55rem; line-height: 1.25; }
+.settings-page-heading p { margin-top: 0.28rem; color: var(--text-secondary); font-size: 0.83rem; }
+.settings-account-chip { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.38rem 0.55rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-secondary); font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+.settings-account-chip svg { color: var(--accent); }
+.settings-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); min-width: 0; gap: 1.25rem; align-items: start; }
+.settings-sidebar { position: sticky; top: calc(var(--header-height) + 0.8rem); min-width: 0; border-right: 1px solid var(--border); }
+.settings-main-panel { display: grid; min-width: 0; align-content: start; gap: 1rem; }
+.settings-section { min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); box-shadow: var(--shadow-sm); }
+.settings-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.settings-field { display: grid; min-width: 0; gap: 0.35rem; }
+.settings-field > span { color: var(--text-primary); font-size: 0.75rem; font-weight: 650; }
+.settings-field input, .settings-field select { width: 100%; min-width: 0; height: 39px; padding: 0 0.65rem; border: 1px solid var(--border); border-radius: 6px; outline: 0; background: var(--surface); color: var(--text-primary); font-size: 0.78rem; }
+.settings-field input:focus, .settings-field select:focus, .settings-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
+.settings-field input:read-only { background: var(--surface-soft); color: var(--text-secondary); }
+.settings-field input:disabled, .settings-field select:disabled, .settings-field textarea:disabled { opacity: 0.65; cursor: not-allowed; }
+.settings-field-wide { grid-column: 1 / -1; }
+.settings-field textarea { width: 100%; padding: 0.55rem 0.65rem; border: 1px solid var(--border); border-radius: 6px; outline: 0; background: var(--surface); color: var(--text-primary); font: inherit; font-size: 0.78rem; resize: vertical; }
+.settings-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; padding-top: 0.9rem; border-top: 1px solid var(--border-light); }
+.settings-form-actions { display: flex; gap: 0.45rem; }
+.settings-form-actions button, .settings-button-primary, .settings-button-secondary { min-height: 36px; padding: 0.45rem 0.72rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.74rem; font-weight: 600; cursor: pointer; }
+.settings-form-actions .settings-button-primary, .settings-button-primary { border-color: var(--accent); background: var(--accent); color: white; }
+.settings-form-actions button:disabled, .settings-button-primary:disabled { opacity: 0.55; cursor: wait; }
+.settings-toggle-row { position: relative; display: flex; align-items: center; gap: 0.65rem; padding: 0.85rem 0; cursor: pointer; }
+.settings-toggle-row > input { width: 16px; height: 16px; flex: 0 0 auto; accent-color: var(--accent); }
+.settings-toggle-row > span { display: grid; gap: 0.1rem; }
+.settings-toggle-row strong { color: var(--text-primary); font-size: 0.75rem; }
+.settings-toggle-row small { color: var(--text-secondary); font-size: 0.68rem; line-height: 1.5; }
+.settings-admin-note { padding: 0.68rem 0.75rem; border-left: 3px solid var(--warning); background: var(--warning-light); color: #765000; font-size: 0.71rem; line-height: 1.5; }
+.settings-inline-message { padding: 0.55rem 0; color: var(--accent); font-size: 0.73rem; }
+.settings-toast { position: fixed; right: 1rem; bottom: 1rem; z-index: var(--z-toast); display: flex; max-width: min(540px, calc(100vw - 2rem)); align-items: center; gap: 1rem; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-md); font-size: 0.76rem; }
+.settings-toast button { border: 0; background: transparent; color: var(--accent); font-size: 0.72rem; font-weight: 650; cursor: pointer; }
+html[data-density='compact'] .settings-section-content { gap: 0.7rem; padding-block: 1rem; }
+@media (max-width: 980px) { .settings-layout { grid-template-columns: 185px minmax(0, 1fr); gap: 0.9rem; } .settings-sidebar { top: calc(var(--header-height) + 0.5rem); } }
+@media (max-width: 760px) { .settings-page-heading { align-items: flex-start; } .settings-layout { grid-template-columns: minmax(0, 1fr); gap: 0.8rem; } .settings-sidebar { position: static; padding-bottom: 0.8rem; border-right: 0; border-bottom: 1px solid var(--border); } }
+@media (max-width: 520px) { .settings-page { padding-bottom: 1rem; } .settings-page-heading { flex-direction: column; gap: 0.6rem; } .settings-page-heading h1 { font-size: 1.35rem; } .settings-account-chip { align-self: flex-start; } .settings-main-panel { gap: 0.75rem; } .settings-form-grid { grid-template-columns: 1fr; } .settings-field-wide { grid-column: auto; } .settings-form-footer { align-items: flex-start; flex-direction: column; } .settings-form-actions { width: 100%; } .settings-form-actions button { flex: 1; } }

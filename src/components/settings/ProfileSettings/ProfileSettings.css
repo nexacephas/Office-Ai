@@ -1,0 +1,7 @@
+.profile-photo-row { display: flex; align-items: center; gap: 0.9rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--border-light); }
+.profile-photo-preview { display: grid; width: 58px; height: 58px; flex: 0 0 auto; place-items: center; overflow: hidden; border-radius: 50%; background: var(--accent-light); color: var(--accent); font-size: 1rem; font-weight: 750; }
+.profile-photo-preview img { width: 100%; height: 100%; object-fit: cover; }
+.profile-photo-row strong { color: var(--text-primary); font-size: 0.8rem; }
+.profile-photo-row p { margin: 0.1rem 0 0.4rem; color: var(--text-secondary); font-size: 0.72rem; }
+.settings-upload-button { position: relative; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.38rem 0.55rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.7rem; font-weight: 600; cursor: pointer; }
+.settings-upload-button input { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; }

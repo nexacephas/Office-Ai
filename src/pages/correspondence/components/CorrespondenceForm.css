@@ -1,0 +1,49 @@
+.correspondence-form-layer { z-index: calc(var(--z-modal) + 1); align-items: center; justify-content: center; padding: 1rem; }
+.correspondence-form-dialog { position: relative; z-index: 1; display: flex; flex-direction: column; width: min(46rem, 100%); max-height: min(92vh, 52rem); overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-lg); animation: correspondence-fade 150ms ease-out; }
+.correspondence-form-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--border-light); }
+.correspondence-form-header h2 { font-size: 1.05rem; }
+.correspondence-form-header p { margin-top: 0.15rem; color: var(--text-secondary); font-size: 0.69rem; }
+.correspondence-form-dialog form { display: flex; flex: 1; flex-direction: column; min-height: 0; }
+.correspondence-form-body { overflow-y: auto; padding: 0.9rem 1.1rem; }
+.correspondence-form-type { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; margin-bottom: 0.75rem; }
+.correspondence-form-type > span { color: var(--text-secondary); font-size: 0.68rem; font-weight: 650; }
+.correspondence-form-type > div { display: flex; align-items: center; gap: 0.25rem; padding: 2px; border: 1px solid var(--border); border-radius: 7px; background: var(--surface-soft); }
+.correspondence-form-type button { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 1.9rem; padding: 0.35rem 0.5rem; border-radius: 5px; color: var(--text-secondary); font-size: 0.65rem; font-weight: 650; }
+.correspondence-form-type button.is-active { background: var(--surface); color: var(--primary-light); box-shadow: var(--shadow-sm); }
+.correspondence-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.68rem 0.75rem; }
+.correspondence-form-field { display: flex; flex-direction: column; gap: 0.28rem; min-width: 0; color: var(--text-secondary); font-size: 0.64rem; font-weight: 650; }
+.correspondence-form-field.full { grid-column: 1 / -1; }
+.correspondence-form-field i,
+.correspondence-form-footer > span i { color: var(--danger); font-style: normal; }
+.correspondence-form-field input,
+.correspondence-form-field select,
+.correspondence-form-field textarea { width: 100%; min-width: 0; border: 1px solid var(--border); border-radius: 5px; outline: 0; background: var(--surface); color: var(--text-primary); font-family: var(--font-body); font-size: 0.69rem; font-weight: 400; }
+.correspondence-form-field input,
+.correspondence-form-field select { min-height: 2.15rem; padding: 0 0.55rem; }
+.correspondence-form-field textarea { min-height: 3.9rem; padding: 0.5rem 0.55rem; line-height: 1.5; resize: vertical; }
+.correspondence-form-field input:focus,
+.correspondence-form-field select:focus,
+.correspondence-form-field textarea:focus { border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(22,58,89,.07); }
+.correspondence-form-field input::placeholder,
+.correspondence-form-field textarea::placeholder { color: var(--text-muted); }
+.correspondence-form-error { margin-top: 0.65rem; color: var(--danger); font-size: 0.68rem; }
+.correspondence-form-ai-link { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.7rem; color: var(--accent-hover); font-size: 0.69rem; font-weight: 650; }
+.correspondence-form-ai-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+.correspondence-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; padding: 0.7rem 1.1rem; border-top: 1px solid var(--border-light); background: var(--surface); }
+.correspondence-form-footer > span { color: var(--text-muted); font-size: 0.6rem; }
+.correspondence-form-footer > div { display: flex; align-items: center; gap: 0.4rem; }
+.correspondence-form-footer button { min-height: 2.1rem; font-size: 0.67rem; }
+
+@media (max-width: 620px) {
+  .correspondence-form-layer { align-items: stretch; padding: 0; }
+  .correspondence-form-dialog { width: 100%; max-height: 100%; border: 0; border-radius: 0; }
+  .correspondence-form-header,
+  .correspondence-form-body { padding-inline: 0.8rem; }
+  .correspondence-form-footer { align-items: flex-start; flex-direction: column; padding: 0.65rem 0.8rem; }
+  .correspondence-form-footer > div { justify-content: flex-end; width: 100%; }
+}
+@media (max-width: 420px) {
+  .correspondence-form-grid { grid-template-columns: minmax(0, 1fr); }
+  .correspondence-form-field.full { grid-column: auto; }
+  .correspondence-form-type { align-items: flex-start; flex-direction: column; }
+}

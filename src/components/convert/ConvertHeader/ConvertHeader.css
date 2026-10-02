@@ -1,0 +1,79 @@
+.convert-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.3rem 1.4rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+}
+
+.convert-header span {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #5f6f86;
+}
+
+.convert-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  color: #0f172a;
+}
+
+.convert-header p {
+  margin: 0.5rem 0 0;
+  max-width: 620px;
+  color: #53657e;
+}
+
+.convert-header-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.convert-primary-button,
+.convert-secondary-button,
+.selected-file-remove,
+.convert-action-button,
+.convert-ghost-button {
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.convert-primary-button,
+.convert-action-button {
+  border: 1px solid #0b7b5c;
+  background: linear-gradient(135deg, #0f9d73 0%, #0b7b5c 100%);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(11, 123, 92, 0.18);
+}
+
+.convert-primary-button:hover,
+.convert-secondary-button:hover,
+.convert-action-button:hover,
+.selected-file-remove:hover,
+.convert-ghost-button:hover {
+  transform: translateY(-1px);
+}
+
+.convert-primary-button {
+  padding: 0.8rem 1.2rem;
+  font-weight: 700;
+}
+
+.convert-secondary-button,
+.convert-ghost-button,
+.selected-file-remove {
+  border: 1px solid #dfe5ef;
+  background: #fff;
+  color: #1f2d3d;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+}

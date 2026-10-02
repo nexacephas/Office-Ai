@@ -1,0 +1,52 @@
+.approval-review-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.approval-review-panel__toggle {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.approval-review-button {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: 0.45rem 0.6rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.approval-review-button.active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.approval-review-button.danger {
+  color: var(--danger);
+}
+
+.approval-review-panel__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.approval-review-panel__field span {
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  font-weight: 650;
+}
+
+.approval-review-panel__field textarea {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 90px;
+  padding: 0.65rem;
+  font: inherit;
+}

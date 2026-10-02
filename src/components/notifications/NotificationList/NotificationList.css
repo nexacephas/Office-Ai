@@ -1,0 +1,10 @@
+.notification-list { min-width: 0; }
+.notification-skeleton-list { display: grid; }
+.notification-skeleton { display: flex; align-items: flex-start; gap: 0.85rem; min-height: 98px; padding: 1rem; border-bottom: 1px solid var(--border-light); }
+.notification-skeleton i { width: 36px; height: 36px; flex: 0 0 auto; border-radius: 8px; background: linear-gradient(90deg, var(--surface-soft), var(--border-light), var(--surface-soft)); background-size: 200% 100%; animation: notification-shimmer 1.25s infinite; }
+.notification-skeleton span { display: grid; flex: 1; gap: 0.55rem; padding-top: 0.1rem; }
+.notification-skeleton b, .notification-skeleton small { height: 10px; border-radius: 5px; background: var(--surface-soft); }
+.notification-skeleton b:first-child { width: 34%; }
+.notification-skeleton b:nth-child(2) { width: 72%; }
+.notification-skeleton small { width: 22%; }
+@keyframes notification-shimmer { to { background-position: -200% 0; } }

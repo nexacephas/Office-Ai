@@ -1,0 +1,8 @@
+.privacy-choice-list { display: grid; }
+.privacy-choice-list .settings-toggle-row { border-bottom: 1px solid var(--border-light); }
+.privacy-data-actions { display: grid; gap: 0.5rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
+.privacy-data-actions h3 { color: var(--primary); font-size: 0.8rem; }
+.privacy-data-actions p, .privacy-data-actions > span { color: var(--text-secondary); font-size: 0.69rem; }
+.privacy-data-actions > div { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.privacy-data-actions button { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.42rem 0.55rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-primary); font-size: 0.68rem; cursor: pointer; }
+.privacy-data-actions .privacy-delete-button { border-color: #edc7c7; color: var(--danger); }

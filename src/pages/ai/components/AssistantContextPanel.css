@@ -1,0 +1,33 @@
+.assistant-context-panel { display: flex; flex-direction: column; min-width: 0; min-height: 0; padding: .72rem .62rem .55rem; background: #fbfcfd; }
+.assistant-context-panel > header { padding: .1rem .28rem .55rem; border-bottom: 1px solid var(--border-light); }
+.assistant-context-panel > header > div > span { color: var(--text-muted); font-size: .5rem; font-weight: 750; letter-spacing: .08em; }
+.assistant-context-panel > header h2 { margin-top: .08rem; font-size: .7rem; }
+.assistant-capabilities { display: flex; flex: 1; flex-direction: column; gap: .1rem; overflow-y: auto; padding-top: .4rem; }
+.assistant-capabilities article { display: flex; gap: .42rem; padding: .46rem .28rem; border-bottom: 1px solid var(--border-light); }
+.assistant-capabilities article > span { display: grid; flex: 0 0 auto; place-items: center; width: 1.55rem; height: 1.55rem; border-radius: 5px; background: var(--surface); color: var(--primary-light); }
+.assistant-capabilities article > div { min-width: 0; }
+.assistant-capabilities strong { color: var(--text-primary); font-size: .59rem; }
+.assistant-capabilities p { margin-top: .09rem; color: var(--text-secondary); font-size: .53rem; line-height: 1.45; }
+.assistant-context-panel > footer { margin-top: auto; padding: .5rem .25rem 0; border-top: 1px solid var(--border-light); }
+.assistant-context-security { display: inline-flex; align-items: center; gap: .25rem; color: var(--text-muted); font-size: .49rem; }
+.assistant-context-security svg { color: var(--success); }
+.assistant-current-context { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; padding: .65rem .2rem; }
+.assistant-context-type { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 6px; background: var(--surface-soft); color: var(--primary-light); }
+.assistant-context-type.type-document { background: var(--info-light); color: var(--info); }
+.assistant-context-type.type-task { background: var(--accent-light); color: var(--accent-hover); }
+.assistant-context-type.type-meeting { background: var(--warning-light); color: #8b650e; }
+.assistant-context-type.type-correspondence { background: var(--surface-soft); color: var(--primary-light); }
+.assistant-current-context > strong { color: var(--text-primary); font-size: .66rem; line-height: 1.4; overflow-wrap: anywhere; }
+.assistant-current-context > small { color: var(--text-secondary); font-size: .55rem; }
+.assistant-context-related { display: flex; flex-direction: column; gap: .28rem; width: 100%; margin-top: .3rem; padding: .5rem; border: 1px solid var(--border-light); border-radius: 5px; background: var(--surface); }
+.assistant-context-related > span { color: var(--text-muted); font-size: .51rem; font-weight: 700; }
+.assistant-context-related > div { display: flex; flex-direction: column; gap: .2rem; color: var(--text-secondary); font-size: .54rem; }
+.assistant-context-actions { display: flex; flex-direction: column; gap: .27rem; width: 100%; margin-top: .15rem; }
+.assistant-context-actions > a,.assistant-context-actions > button { display: inline-flex; align-items: center; gap: .3rem; min-height: 1.8rem; padding: .28rem .4rem; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--primary-light); font-size: .57rem; font-weight: 650; text-align: left; }
+.assistant-context-actions > a:hover,.assistant-context-actions > button:hover { background: var(--accent-light); border-color: rgba(22,138,91,.25); color: var(--accent-hover); }
+@media (max-width: 767px) {
+  .assistant-context-panel.is-mobile-drawer { position: fixed; z-index: calc(var(--z-modal) + 2); top: var(--header-height); right: 0; bottom: 0; display: flex; width: min(19rem, calc(100vw - 3rem)); padding: .85rem .7rem .6rem; border-left: 1px solid var(--border); background: var(--surface); box-shadow: var(--shadow-lg); }
+  .assistant-context-panel.is-mobile-drawer > header { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  .assistant-context-close { display: grid; place-items: center; width: 1.8rem; height: 1.8rem; color: var(--text-secondary); }
+  .assistant-capabilities article { padding: .6rem .3rem; }
+}

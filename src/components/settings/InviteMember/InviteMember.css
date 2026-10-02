@@ -1,0 +1,9 @@
+.invite-member-modal { width: min(100%, 480px); padding: 1.25rem; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); box-shadow: var(--shadow-lg); }
+.invite-member-modal > header { display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border); }
+.invite-member-modal > header span { color: var(--accent); font-size: 0.64rem; font-weight: 750; letter-spacing: 0.08em; }
+.invite-member-modal h2 { margin-top: 0.15rem; color: var(--primary); font-family: var(--font-heading); font-size: 1.1rem; }
+.invite-member-modal > header button { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text-secondary); cursor: pointer; }
+.invite-member-modal form { display: grid; gap: 0.8rem; padding-top: 1rem; }
+.invite-member-modal form > p { color: var(--text-secondary); font-size: 0.7rem; }
+.invite-member-modal form footer { display: flex; justify-content: flex-end; gap: 0.45rem; padding-top: 0.65rem; border-top: 1px solid var(--border-light); }
+.invite-member-modal form footer .settings-button-primary { border-color: var(--accent); background: var(--accent); color: white; }

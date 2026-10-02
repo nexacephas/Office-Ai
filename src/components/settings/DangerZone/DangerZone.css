@@ -1,0 +1,11 @@
+.settings-danger-zone { border: 1px solid #edc7c7; border-radius: 7px; background: var(--surface); }
+.settings-danger-zone header { padding: 0.9rem 1rem; border-bottom: 1px solid #f1d9d9; }
+.settings-danger-zone header > span { color: var(--danger); font-size: 0.62rem; font-weight: 750; letter-spacing: 0.08em; }
+.settings-danger-zone h2 { margin-top: 0.2rem; color: var(--text-primary); font-size: 0.84rem; }
+.settings-danger-zone p { margin-top: 0.2rem; color: var(--text-secondary); font-size: 0.68rem; }
+.settings-danger-row { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.8rem 1rem; border-top: 1px solid var(--border-light); }
+.settings-danger-row div { display: grid; gap: 0.12rem; }
+.settings-danger-row strong { color: var(--text-primary); font-size: 0.73rem; }
+.settings-danger-row small { color: var(--text-secondary); font-size: 0.66rem; line-height: 1.45; }
+.settings-danger-row button { display: inline-flex; align-items: center; gap: 0.3rem; flex: 0 0 auto; padding: 0.4rem 0.55rem; border: 1px solid #edc7c7; border-radius: 6px; background: var(--surface); color: var(--danger); font-size: 0.67rem; font-weight: 600; cursor: pointer; }
+@media (max-width: 560px) { .settings-danger-row { align-items: flex-start; flex-direction: column; } }

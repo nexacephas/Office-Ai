@@ -1,0 +1,68 @@
+.ocr-panel,
+.batch-panel,
+.processing-panel,
+.recent-conversions-panel,
+.conversion-history-panel,
+.ai-panel,
+.empty-convert-panel {
+  padding: 1.1rem 1rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.ocr-panel-header,
+.batch-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.ocr-panel-header span,
+.batch-panel-header span,
+.processing-panel-header span,
+.recent-conversions-header span,
+.history-panel-header span,
+.ai-panel-header span,
+.empty-convert-panel span {
+  display: block;
+  color: #60718a;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.ocr-panel-header h3,
+.batch-panel-header h3,
+.processing-panel-header h3,
+.recent-conversions-header h3,
+.history-panel-header h3,
+.ai-panel-header h3 {
+  margin: 0.3rem 0 0;
+  color: #172437;
+}
+
+.ocr-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.ocr-options div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #edf2f8;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.ocr-options strong {
+  color: #1a2d40;
+}
+
+.ocr-options small {
+  color: #5d7288;
+}

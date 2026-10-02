@@ -1,0 +1,5 @@
+.correspondence-tabs { display: flex; align-items: center; gap: 0.12rem; min-width: 0; overflow-x: auto; border-bottom: 1px solid var(--border); scrollbar-width: thin; }
+.correspondence-tabs button { position: relative; flex: 0 0 auto; min-height: 2.35rem; padding: 0.55rem 0.72rem; border-bottom: 2px solid transparent; color: var(--text-secondary); font-size: 0.73rem; font-weight: 600; white-space: nowrap; }
+.correspondence-tabs button:hover { color: var(--primary-light); }
+.correspondence-tabs button.is-active { border-bottom-color: var(--accent); color: var(--accent-hover); }
+@media (max-width: 560px) { .correspondence-tabs button { min-height: 2.2rem; padding-inline: 0.58rem; font-size: 0.68rem; } }

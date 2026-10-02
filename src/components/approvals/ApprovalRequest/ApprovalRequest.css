@@ -1,0 +1,74 @@
+.approval-request-shell {
+  padding: 1rem;
+  width: min(720px, 92vw);
+}
+
+.approval-request-shell__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.approval-request-shell__header span {
+  display: block;
+  color: var(--accent);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.approval-request-shell__header h3 {
+  margin: 0.3rem 0 0;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.approval-request-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.approval-request-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.approval-request-form label.full-width {
+  grid-column: 1 / -1;
+}
+
+.approval-request-form span {
+  color: var(--text-secondary);
+  font-size: 0.69rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+.approval-request-form input,
+.approval-request-form select,
+.approval-request-form textarea {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  background: #fff;
+  color: #17212b;
+}
+
+.approval-request-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .approval-request-form {
+    grid-template-columns: 1fr;
+  }
+}

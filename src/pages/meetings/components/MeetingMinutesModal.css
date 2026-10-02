@@ -1,0 +1,10 @@
+.meeting-minutes-layer { z-index: calc(var(--z-modal) + 2); align-items: center; justify-content: center; padding: 1rem; }
+.meeting-minutes-modal { position: relative; z-index: 1; display: flex; flex-direction: column; width: min(42rem, 100%); max-height: min(90vh, 48rem); overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-lg); }
+.meeting-minutes-modal > header { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; border-bottom: 1px solid var(--border-light); }
+.meeting-minutes-modal h2 { font-size: 0.95rem; }
+.meeting-minutes-modal > textarea { flex: 1; min-height: 20rem; margin: 0.85rem; padding: 0.8rem; border: 1px solid var(--border); border-radius: 6px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.68rem; line-height: 1.65; resize: vertical; }
+.meeting-minutes-modal > footer { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0.7rem 1rem; border-top: 1px solid var(--border-light); }
+.meeting-minutes-modal > footer p { color: var(--text-muted); font-size: 0.58rem; }
+.meeting-minutes-modal > footer > div { display: flex; gap: 0.35rem; }
+.meeting-minutes-modal > footer button { min-height: 1.95rem; padding: 0.3rem 0.48rem; font-size: 0.61rem; }
+@media (max-width: 600px) { .meeting-minutes-layer { align-items: stretch; padding: 0; } .meeting-minutes-modal { width: 100%; max-height: 100%; border: 0; border-radius: 0; } .meeting-minutes-modal > textarea { min-height: 0; } .meeting-minutes-modal > footer { align-items: flex-start; flex-direction: column; } .meeting-minutes-modal > footer > div { justify-content: flex-end; width: 100%; } }

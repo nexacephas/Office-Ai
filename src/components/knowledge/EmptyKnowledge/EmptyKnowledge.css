@@ -1,0 +1,8 @@
+.empty-knowledge { display: grid; justify-items: center; gap: 0.45rem; padding: 2rem 1rem; border: 1px dashed var(--border); border-radius: 7px; background: var(--surface); text-align: center; }
+.empty-knowledge > span { display: grid; width: 46px; height: 46px; margin-bottom: 0.2rem; place-items: center; border-radius: 50%; background: var(--accent-light); color: var(--accent); }
+.empty-knowledge h2 { color: var(--primary); font-size: 0.92rem; }
+.empty-knowledge p { max-width: 430px; color: var(--text-secondary); font-size: 0.74rem; }
+.empty-knowledge > button { margin-top: 0.45rem; }
+.empty-knowledge-results ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.1rem; margin: 0.25rem 0; color: var(--text-secondary); font-size: 0.69rem; }
+.empty-knowledge-results > div { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.empty-knowledge-results > div button { padding: 0.42rem 0.6rem; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--accent); font-size: 0.68rem; font-weight: 650; cursor: pointer; }

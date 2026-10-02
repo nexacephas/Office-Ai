@@ -1,0 +1,15 @@
+.knowledge-source-table-wrap { width: 100%; overflow: hidden; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); }
+.knowledge-source-table { width: 100%; border-collapse: collapse; text-align: left; }
+.knowledge-source-table th { padding: 0.62rem 0.55rem; background: var(--surface-soft); color: var(--text-secondary); font-size: 0.62rem; font-weight: 700; white-space: nowrap; }
+.knowledge-source-table td { max-width: 220px; padding: 0.62rem 0.55rem; overflow: hidden; border-top: 1px solid var(--border-light); color: var(--text-secondary); font-size: 0.65rem; text-overflow: ellipsis; white-space: nowrap; }
+.knowledge-source-name { display: inline-flex; align-items: center; gap: 0.4rem; max-width: 100%; padding: 0; border: 0; background: transparent; color: var(--primary); font-size: 0.67rem; font-weight: 650; cursor: pointer; }
+.knowledge-source-name svg { flex: 0 0 auto; color: var(--accent); }
+.knowledge-source-name span { overflow: hidden; text-overflow: ellipsis; }
+.knowledge-table-actions { display: flex; gap: 0.2rem; }
+.knowledge-table-actions button { display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid transparent; border-radius: 4px; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.knowledge-table-actions button:hover { border-color: var(--border); background: var(--surface); color: var(--accent); }
+.knowledge-source-cards { display: none; }
+.knowledge-source-skeletons { display: grid; gap: 0.4rem; }
+.knowledge-source-skeletons i { height: 45px; border-radius: 5px; background: linear-gradient(90deg, var(--surface-soft), var(--border-light), var(--surface-soft)); background-size: 200% 100%; animation: knowledge-table-shimmer 1.2s infinite; }
+@keyframes knowledge-table-shimmer { to { background-position: -200% 0; } }
+@media (max-width: 900px) { .knowledge-source-table { display: none; } .knowledge-source-cards { display: grid; gap: 0.45rem; padding: 0.5rem; } .knowledge-source-table-wrap { border: 0; background: transparent; } }

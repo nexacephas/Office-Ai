@@ -1,0 +1,94 @@
+.registry-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 960px;
+}
+
+.registry-table th,
+.registry-table td {
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.58rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.registry-table th {
+  color: var(--text-secondary);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--surface-soft);
+}
+
+.registry-table td {
+  color: var(--text-primary);
+  font-size: 0.74rem;
+}
+
+.registry-table tbody tr:hover { background: var(--surface-soft); }
+.registry-table th:last-child, .registry-table td:last-child { width: 170px; white-space: nowrap; }
+
+.file-number-cell {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.registry-table .direction-pill,
+.registry-table .status-pill,
+.registry-table .priority-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0.16rem 0.38rem;
+  font-size: 0.62rem;
+  font-weight: 650;
+}
+
+.direction-pill {
+  background: #edf6ff;
+  color: #1d4ed8;
+}
+
+.status-pill.registered,
+.status-pill.received,
+.status-pill.with-registry,
+.status-pill.returned,
+.status-pill.closed,
+.status-pill.archived {
+  background: #edf7f1;
+  color: #0d6d4e;
+}
+
+.status-pill.with-staff,
+.status-pill.under-action,
+.status-pill.dispatched {
+  background: #fff4de;
+  color: #a15b00;
+}
+
+.status-pill.overdue {
+  background: #ffe9e8;
+  color: #b3261e;
+}
+
+.priority-pill.low {
+  background: #edf2f7;
+  color: #475569;
+}
+
+.priority-pill.normal {
+  background: #ebf9f4;
+  color: #0b7a5b;
+}
+
+.priority-pill.high {
+  background: #fff4de;
+  color: #a15b00;
+}
+
+.priority-pill.urgent {
+  background: #ffe9e8;
+  color: #b3261e;
+}
